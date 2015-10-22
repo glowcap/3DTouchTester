@@ -17,6 +17,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     var finalCheckReady = false
     var finalCheckDone = false
     
+    var forceAmount: CGFloat = 0.0
+    
     @IBOutlet weak var binaryLabel: UILabel!
     @IBOutlet weak var testingLabel: UILabel!
     @IBOutlet weak var percentageLabel: UILabel!
@@ -39,9 +41,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateTestLabelText()
-        assignTaptoButtonCenter()
         
+        let tap = UITapGestureRecognizer(target: self, action: "handleTap")
+        btnCenter.addGestureRecognizer(tap)
+        
+        switch self.traitCollection.forceTouchCapability {
+        case .Available: compatible = true
+        default:
+            compatible = false
+        }
+        animateTestLabelText()
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -57,14 +66,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
-//MARK: Setup Gesture Recognizer
-    func assignTaptoButtonCenter() {
-        let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap"))
-        
-        tap.delegate = self
-        btnCenter.addGestureRecognizer(tap)
-    }
-    
     func handleTap() {
         if finalCheckReady {
             infoBoardLabel.text = "01110100 01100101 01110011 01110100"
@@ -73,13 +74,95 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             animateBtnCenter()
             afterDelay(1.1){self.finalCheckDone = true}
             finalCheckReady = false
-        } else if finalCheckDone {
-            print("Test Force Here")
-            percentageLabel.text = "88%"
-        } else {
-            print("not yet")
         }
     }
+    
+
+    
+//MARK: Set Up Touches
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if finalCheckDone {
+            testTouches(touches)
+            if compatible {
+                // do something
+            } else {
+                // timer functions
+            }
+            
+        }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if finalCheckDone {
+            testTouches(touches)
+            if compatible {
+                // do something
+            } else {
+                // timer functions
+            }
+        }
+    }
+    
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        if finalCheckDone {
+            testTouches(touches!)
+            if compatible {
+                print("canceled")
+                binaryLabel.textColor = UIColor.whiteColor()
+                percentageLabel.text = "0%"
+            } else {
+                // cancel timer
+                // set percentageLabel.text = "00"
+            }
+        }
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if finalCheckDone {
+            testTouches(touches)
+            if compatible {
+                print("Got here")
+                binaryLabel.textColor = UIColor.whiteColor()
+                percentageLabel.text = "0%"
+            } else {
+                // cancel timer
+                // set percentageLabel.text = "00"
+            }
+        }
+    }
+    
+    func handleTouch(touch:UITouch) {
+        if finalCheckDone {
+            if compatible {
+                forceAmount = touch.force / touch.maximumPossibleForce
+                let percent = Int(forceAmount * 100)
+                let percentString = String(percent)
+                
+                binaryLabel.textColor = UIColor(white: 0.7, alpha: CGFloat(Double(percent) * 0.01))
+                percentageLabel.text = percentString + "%"
+            } else {
+                // startTimer
+                // percentageLabel.text = timerCount()
+            }
+        } else {
+            print("Not Ready")
+        }
+        
+    }
+    
+    
+    func testTouches(touches: Set<UITouch>) {
+        // Get the first touch and its location
+        let touch = touches.first
+        let touchLocation = touch!.locationInView(self.view)
+        
+        let btnViewFrame = view.convertRect(btnCenter.frame, fromView: btnCenter.superview)
+        
+        if CGRectContainsPoint(btnViewFrame, touchLocation) {
+            handleTouch(touch!)
+        }
+    }
+
     
 //MARK: Set Up Views
     func setUpImageViews() {
@@ -134,6 +217,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 } else {
                     lightColor = PressureStyleKit.imageOfLightUpCircleFail
                     self.fillColor = UIColor(red: 255, green: 63/255, blue: 27/255, alpha: 1)
+                    self.infoBoardLabel.textColor = self.fillColor
+                    self.infoBoardLabel.text = "Unsupported Device.\nTap button to continue."
                 }
                 self.enableFinalCheckBtn()
                 self.signalLampImgView.image = lightColor}).animateWithDuration(0.4, animations: {
@@ -157,10 +242,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                         self.forceLabel.text = "ERROR!"
                         self.forceLabel.textColor = self.fillColor
                         self.infoBoardLabel.textColor = self.fillColor
-                        self.infoBoardLabel.text = "Error!\nSwitching to\nTimer Mode."
+                        self.infoBoardLabel.text = "Unsupported Device\nSwitching to\nTimer Mode."
                         self.afterDelay(1.0){
                             self.forceLabel.text = "SECONDS"
-                            self.infoBoardLabel.text = "Timer Mode\nHold button to display time held."
+                            self.infoBoardLabel.text = "Unsupported Device\nTimer Mode\nHold button to display time held."
                             
                         }
                     } else {
