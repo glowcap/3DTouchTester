@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:3DTouchTester.xcodeproj">
+      location = "self:/Users/DMac/Documents/Programming/Apps/3DTouchTester/3D Touch Tester.xcodeproj">
    </FileRef>
 </Workspace>

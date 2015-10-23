@@ -43,3 +43,9 @@ class InfoBoard: UIView {
         PressureStyleKit.drawInformationSign()
     }
 }
+
+class Signal: UIView {
+    override func drawRect(rect: CGRect) {
+        PressureStyleKit.drawSixSignalRing()
+    }
+}

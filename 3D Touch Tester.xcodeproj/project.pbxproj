@@ -32,7 +32,7 @@
 		837C5B4F1BD86C830002A749 /* RBBBlockBasedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBBlockBasedArray.swift; sourceTree = "<group>"; };
 		837C5B501BD86C830002A749 /* RBBLinearInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBLinearInterpolation.swift; sourceTree = "<group>"; };
 		837C5B511BD86C830002A749 /* RBBSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBSpringAnimation.swift; sourceTree = "<group>"; };
-		8385935E1BD71AB9008AB3AD /* 3DTouchTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouchTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8385935E1BD71AB9008AB3AD /* 3D Touch Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D Touch Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		838593611BD71AB9008AB3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838593631BD71AB9008AB3AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		838593661BD71AB9008AB3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		8385935F1BD71AB9008AB3AD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8385935E1BD71AB9008AB3AD /* 3DTouchTester.app */,
+				8385935E1BD71AB9008AB3AD /* 3D Touch Tester.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8385935D1BD71AB9008AB3AD /* 3DTouchTester */ = {
+		8385935D1BD71AB9008AB3AD /* 3D Touch Tester */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 838593701BD71AB9008AB3AD /* Build configuration list for PBXNativeTarget "3DTouchTester" */;
+			buildConfigurationList = 838593701BD71AB9008AB3AD /* Build configuration list for PBXNativeTarget "3D Touch Tester" */;
 			buildPhases = (
 				8385935A1BD71AB9008AB3AD /* Sources */,
 				8385935B1BD71AB9008AB3AD /* Frameworks */,
@@ -124,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = 3DTouchTester;
+			name = "3D Touch Tester";
 			productName = 3DTouchTester;
-			productReference = 8385935E1BD71AB9008AB3AD /* 3DTouchTester.app */;
+			productReference = 8385935E1BD71AB9008AB3AD /* 3D Touch Tester.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 838593591BD71AB9008AB3AD /* Build configuration list for PBXProject "3DTouchTester" */;
+			buildConfigurationList = 838593591BD71AB9008AB3AD /* Build configuration list for PBXProject "3D Touch Tester" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -156,7 +156,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8385935D1BD71AB9008AB3AD /* 3DTouchTester */,
+				8385935D1BD71AB9008AB3AD /* 3D Touch Tester */,
 			);
 		};
 /* End PBXProject section */
@@ -302,8 +302,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 3DTouchTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Daymein.Gregorio.-DTouchTester";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daymein.Gregorio.3DTouchTester;
+				PRODUCT_NAME = "3D Touch Tester";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -314,8 +314,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 3DTouchTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Daymein.Gregorio.-DTouchTester";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daymein.Gregorio.3DTouchTester;
+				PRODUCT_NAME = "3D Touch Tester";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -323,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		838593591BD71AB9008AB3AD /* Build configuration list for PBXProject "3DTouchTester" */ = {
+		838593591BD71AB9008AB3AD /* Build configuration list for PBXProject "3D Touch Tester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8385936E1BD71AB9008AB3AD /* Debug */,
@@ -332,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		838593701BD71AB9008AB3AD /* Build configuration list for PBXNativeTarget "3DTouchTester" */ = {
+		838593701BD71AB9008AB3AD /* Build configuration list for PBXNativeTarget "3D Touch Tester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				838593711BD71AB9008AB3AD /* Debug */,
