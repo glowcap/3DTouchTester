@@ -49,3 +49,15 @@ class Signal: UIView {
         PressureStyleKit.drawSixSignalRing()
     }
 }
+
+class Non6BaseView: UIView {
+    override func drawRect(rect: CGRect) {
+        PressureStyleKit.drawNon6StartView()
+    }
+}
+
+class Non6BtnTop: UIView {
+    override func drawRect(rect: CGRect) {
+        PressureStyleKit.drawNon6StartBtn()
+    }
+}
