@@ -49,16 +49,19 @@ public class PressureStyleKit : NSObject {
         static var testing6s2Targets: [AnyObject]?
         static var imageOfNon6StartView: UIImage?
         static var non6StartViewTargets: [AnyObject]?
+        static var imageOfCloseAdsBtn: UIImage?
+        static var closeAdsBtnTargets: [AnyObject]?
     }
 
     //// Drawing Methods
 
     public class func drawMain() {
 
+        //// Group 2
         //// Bezier Drawing
         let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPointMake(125.5, 116.5))
-        bezierPath.addLineToPoint(CGPointMake(181.5, 116.5))
+        bezierPath.moveToPoint(CGPointMake(125.5, 101.5))
+        bezierPath.addLineToPoint(CGPointMake(181.5, 101.5))
         UIColor.grayColor().setStroke()
         bezierPath.lineWidth = 3
         bezierPath.stroke()
@@ -66,15 +69,15 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 3 Drawing
         let bezier3Path = UIBezierPath()
-        bezier3Path.moveToPoint(CGPointMake(181.5, 116.5))
-        bezier3Path.addLineToPoint(CGPointMake(181.5, 164.5))
+        bezier3Path.moveToPoint(CGPointMake(181.5, 101.5))
+        bezier3Path.addLineToPoint(CGPointMake(181.5, 149.5))
         UIColor.grayColor().setStroke()
         bezier3Path.lineWidth = 3
         bezier3Path.stroke()
 
 
         //// Oval Drawing
-        let ovalPath = UIBezierPath(ovalInRect: CGRectMake(174.5, 108.5, 15, 15))
+        let ovalPath = UIBezierPath(ovalInRect: CGRectMake(174.5, 93.5, 15, 15))
         UIColor.whiteColor().setFill()
         ovalPath.fill()
         UIColor.grayColor().setStroke()
@@ -84,14 +87,14 @@ public class PressureStyleKit : NSObject {
 
         //// Group
         //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(roundedRect: CGRectMake(228.5, 164.5, 132, 108), cornerRadius: 20)
+        let rectangle2Path = UIBezierPath(roundedRect: CGRectMake(228.5, 149.5, 132, 108), cornerRadius: 20)
         UIColor.grayColor().setStroke()
         rectangle2Path.lineWidth = 3
         rectangle2Path.stroke()
 
 
         //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(roundedRect: CGRectMake(239, 176, 112.5, 69.5), cornerRadius: 20)
+        let rectanglePath = UIBezierPath(roundedRect: CGRectMake(239, 161, 112.5, 69.5), cornerRadius: 20)
         UIColor.grayColor().setStroke()
         rectanglePath.lineWidth = 3
         rectanglePath.stroke()
@@ -101,30 +104,30 @@ public class PressureStyleKit : NSObject {
 
         //// Rectangle 3 Drawing
         let rectangle3Path = UIBezierPath()
-        rectangle3Path.moveToPoint(CGPointMake(315, 267.5))
-        rectangle3Path.addLineToPoint(CGPointMake(315, 267.5))
-        rectangle3Path.moveToPoint(CGPointMake(277, 267.5))
-        rectangle3Path.addLineToPoint(CGPointMake(277, 267.5))
-        rectangle3Path.moveToPoint(CGPointMake(320.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(320.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(320.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(320.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(320.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(320.5, 273))
-        rectangle3Path.addCurveToPoint(CGPointMake(315, 278.5), controlPoint1: CGPointMake(320.5, 276.04), controlPoint2: CGPointMake(318.04, 278.5))
-        rectangle3Path.addLineToPoint(CGPointMake(315, 278.5))
-        rectangle3Path.addLineToPoint(CGPointMake(315, 278.5))
-        rectangle3Path.addLineToPoint(CGPointMake(296, 278.5))
-        rectangle3Path.addCurveToPoint(CGPointMake(277, 278.5), controlPoint1: CGPointMake(277, 278.5), controlPoint2: CGPointMake(277, 278.5))
-        rectangle3Path.addLineToPoint(CGPointMake(277, 278.5))
-        rectangle3Path.addCurveToPoint(CGPointMake(271.5, 273), controlPoint1: CGPointMake(273.96, 278.5), controlPoint2: CGPointMake(271.5, 276.04))
-        rectangle3Path.addLineToPoint(CGPointMake(271.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(271.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(271.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(271.5, 273))
-        rectangle3Path.addLineToPoint(CGPointMake(271.5, 273))
-        rectangle3Path.moveToPoint(CGPointMake(296, 267.5))
-        rectangle3Path.addLineToPoint(CGPointMake(296, 267.5))
+        rectangle3Path.moveToPoint(CGPointMake(315, 252.5))
+        rectangle3Path.addLineToPoint(CGPointMake(315, 252.5))
+        rectangle3Path.moveToPoint(CGPointMake(277, 252.5))
+        rectangle3Path.addLineToPoint(CGPointMake(277, 252.5))
+        rectangle3Path.moveToPoint(CGPointMake(320.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(320.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(320.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(320.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(320.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(320.5, 258))
+        rectangle3Path.addCurveToPoint(CGPointMake(315, 263.5), controlPoint1: CGPointMake(320.5, 261.04), controlPoint2: CGPointMake(318.04, 263.5))
+        rectangle3Path.addLineToPoint(CGPointMake(315, 263.5))
+        rectangle3Path.addLineToPoint(CGPointMake(315, 263.5))
+        rectangle3Path.addLineToPoint(CGPointMake(296, 263.5))
+        rectangle3Path.addCurveToPoint(CGPointMake(277, 263.5), controlPoint1: CGPointMake(277, 263.5), controlPoint2: CGPointMake(277, 263.5))
+        rectangle3Path.addLineToPoint(CGPointMake(277, 263.5))
+        rectangle3Path.addCurveToPoint(CGPointMake(271.5, 258), controlPoint1: CGPointMake(273.96, 263.5), controlPoint2: CGPointMake(271.5, 261.04))
+        rectangle3Path.addLineToPoint(CGPointMake(271.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(271.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(271.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(271.5, 258))
+        rectangle3Path.addLineToPoint(CGPointMake(271.5, 258))
+        rectangle3Path.moveToPoint(CGPointMake(296, 252.5))
+        rectangle3Path.addLineToPoint(CGPointMake(296, 252.5))
         UIColor.grayColor().setStroke()
         rectangle3Path.lineWidth = 3
         rectangle3Path.stroke()
@@ -132,9 +135,9 @@ public class PressureStyleKit : NSObject {
 
         //// Oval 2 Drawing
         let oval2Path = UIBezierPath()
-        oval2Path.moveToPoint(CGPointMake(302.5, 278.5))
-        oval2Path.addCurveToPoint(CGPointMake(296.5, 284.5), controlPoint1: CGPointMake(302.5, 281.81), controlPoint2: CGPointMake(299.81, 284.5))
-        oval2Path.addCurveToPoint(CGPointMake(290.5, 278.5), controlPoint1: CGPointMake(293.19, 284.5), controlPoint2: CGPointMake(290.5, 281.81))
+        oval2Path.moveToPoint(CGPointMake(302.5, 263.5))
+        oval2Path.addCurveToPoint(CGPointMake(296.5, 269.5), controlPoint1: CGPointMake(302.5, 266.81), controlPoint2: CGPointMake(299.81, 269.5))
+        oval2Path.addCurveToPoint(CGPointMake(290.5, 263.5), controlPoint1: CGPointMake(293.19, 269.5), controlPoint2: CGPointMake(290.5, 266.81))
         UIColor.grayColor().setStroke()
         oval2Path.lineWidth = 3
         oval2Path.stroke()
@@ -142,15 +145,15 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 4 Drawing
         let bezier4Path = UIBezierPath()
-        bezier4Path.moveToPoint(CGPointMake(296.5, 284.5))
-        bezier4Path.addLineToPoint(CGPointMake(296.5, 325.5))
+        bezier4Path.moveToPoint(CGPointMake(296.5, 269.5))
+        bezier4Path.addLineToPoint(CGPointMake(296.5, 310.5))
         UIColor.grayColor().setStroke()
         bezier4Path.lineWidth = 3
         bezier4Path.stroke()
 
 
         //// Oval 4 Drawing
-        let oval4Path = UIBezierPath(ovalInRect: CGRectMake(289.5, 325.5, 15, 15))
+        let oval4Path = UIBezierPath(ovalInRect: CGRectMake(289.5, 310.5, 15, 15))
         UIColor.whiteColor().setFill()
         oval4Path.fill()
         UIColor.grayColor().setStroke()
@@ -160,40 +163,40 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 7 Drawing
         let bezier7Path = UIBezierPath()
-        bezier7Path.moveToPoint(CGPointMake(182, 164.5))
-        bezier7Path.addLineToPoint(CGPointMake(182, 164.5))
-        bezier7Path.addLineToPoint(CGPointMake(182, 164.5))
-        bezier7Path.addLineToPoint(CGPointMake(182.38, 164.5))
-        bezier7Path.addCurveToPoint(CGPointMake(188.94, 169.1), controlPoint1: CGPointMake(185.31, 164.5), controlPoint2: CGPointMake(187.93, 166.34))
-        bezier7Path.addCurveToPoint(CGPointMake(189.5, 175.82), controlPoint1: CGPointMake(189.5, 170.87), controlPoint2: CGPointMake(189.5, 172.52))
-        bezier7Path.addLineToPoint(CGPointMake(189.5, 264.21))
-        bezier7Path.addCurveToPoint(CGPointMake(189.01, 274.62), controlPoint1: CGPointMake(189.5, 271.48), controlPoint2: CGPointMake(189.5, 273.13))
-        bezier7Path.addLineToPoint(CGPointMake(188.94, 274.9))
-        bezier7Path.addCurveToPoint(CGPointMake(182.37, 279.5), controlPoint1: CGPointMake(187.93, 277.66), controlPoint2: CGPointMake(185.31, 279.5))
-        bezier7Path.addCurveToPoint(CGPointMake(182, 279.5), controlPoint1: CGPointMake(182, 279.5), controlPoint2: CGPointMake(182, 279.5))
-        bezier7Path.addLineToPoint(CGPointMake(182, 279.5))
-        bezier7Path.addLineToPoint(CGPointMake(182, 279.5))
-        bezier7Path.addLineToPoint(CGPointMake(181.62, 279.5))
-        bezier7Path.addCurveToPoint(CGPointMake(175.06, 274.9), controlPoint1: CGPointMake(178.69, 279.5), controlPoint2: CGPointMake(176.07, 277.66))
-        bezier7Path.addCurveToPoint(CGPointMake(174.5, 268.18), controlPoint1: CGPointMake(174.5, 273.13), controlPoint2: CGPointMake(174.5, 271.48))
-        bezier7Path.addLineToPoint(CGPointMake(174.5, 264.21))
-        bezier7Path.addCurveToPoint(CGPointMake(174.99, 169.38), controlPoint1: CGPointMake(174.5, 172.52), controlPoint2: CGPointMake(174.5, 170.87))
-        bezier7Path.addLineToPoint(CGPointMake(175.06, 169.1))
-        bezier7Path.addCurveToPoint(CGPointMake(181.62, 164.5), controlPoint1: CGPointMake(176.07, 166.34), controlPoint2: CGPointMake(178.69, 164.5))
-        bezier7Path.addCurveToPoint(CGPointMake(182, 164.5), controlPoint1: CGPointMake(182, 164.5), controlPoint2: CGPointMake(182, 164.5))
-        bezier7Path.addLineToPoint(CGPointMake(182, 164.5))
+        bezier7Path.moveToPoint(CGPointMake(182, 149.5))
+        bezier7Path.addLineToPoint(CGPointMake(182, 149.5))
+        bezier7Path.addLineToPoint(CGPointMake(182, 149.5))
+        bezier7Path.addLineToPoint(CGPointMake(182.38, 149.5))
+        bezier7Path.addCurveToPoint(CGPointMake(188.94, 154.1), controlPoint1: CGPointMake(185.31, 149.5), controlPoint2: CGPointMake(187.93, 151.34))
+        bezier7Path.addCurveToPoint(CGPointMake(189.5, 160.82), controlPoint1: CGPointMake(189.5, 155.87), controlPoint2: CGPointMake(189.5, 157.52))
+        bezier7Path.addLineToPoint(CGPointMake(189.5, 249.21))
+        bezier7Path.addCurveToPoint(CGPointMake(189.01, 259.62), controlPoint1: CGPointMake(189.5, 256.48), controlPoint2: CGPointMake(189.5, 258.13))
+        bezier7Path.addLineToPoint(CGPointMake(188.94, 259.9))
+        bezier7Path.addCurveToPoint(CGPointMake(182.37, 264.5), controlPoint1: CGPointMake(187.93, 262.66), controlPoint2: CGPointMake(185.31, 264.5))
+        bezier7Path.addCurveToPoint(CGPointMake(182, 264.5), controlPoint1: CGPointMake(182, 264.5), controlPoint2: CGPointMake(182, 264.5))
+        bezier7Path.addLineToPoint(CGPointMake(182, 264.5))
+        bezier7Path.addLineToPoint(CGPointMake(182, 264.5))
+        bezier7Path.addLineToPoint(CGPointMake(181.62, 264.5))
+        bezier7Path.addCurveToPoint(CGPointMake(175.06, 259.9), controlPoint1: CGPointMake(178.69, 264.5), controlPoint2: CGPointMake(176.07, 262.66))
+        bezier7Path.addCurveToPoint(CGPointMake(174.5, 253.18), controlPoint1: CGPointMake(174.5, 258.13), controlPoint2: CGPointMake(174.5, 256.48))
+        bezier7Path.addLineToPoint(CGPointMake(174.5, 249.21))
+        bezier7Path.addCurveToPoint(CGPointMake(174.99, 154.38), controlPoint1: CGPointMake(174.5, 157.52), controlPoint2: CGPointMake(174.5, 155.87))
+        bezier7Path.addLineToPoint(CGPointMake(175.06, 154.1))
+        bezier7Path.addCurveToPoint(CGPointMake(181.62, 149.5), controlPoint1: CGPointMake(176.07, 151.34), controlPoint2: CGPointMake(178.69, 149.5))
+        bezier7Path.addCurveToPoint(CGPointMake(182, 149.5), controlPoint1: CGPointMake(182, 149.5), controlPoint2: CGPointMake(182, 149.5))
+        bezier7Path.addLineToPoint(CGPointMake(182, 149.5))
         bezier7Path.closePath()
-        bezier7Path.moveToPoint(CGPointMake(175.5, 175.5))
-        bezier7Path.addLineToPoint(CGPointMake(189.5, 175.5))
-        bezier7Path.moveToPoint(CGPointMake(175.5, 266.5))
-        bezier7Path.addLineToPoint(CGPointMake(189.5, 266.5))
+        bezier7Path.moveToPoint(CGPointMake(175.5, 160.5))
+        bezier7Path.addLineToPoint(CGPointMake(189.5, 160.5))
+        bezier7Path.moveToPoint(CGPointMake(175.5, 251.5))
+        bezier7Path.addLineToPoint(CGPointMake(189.5, 251.5))
         UIColor.grayColor().setStroke()
         bezier7Path.lineWidth = 3
         bezier7Path.stroke()
 
 
         //// Rectangle 4 Drawing
-        let rectangle4Path = UIBezierPath(roundedRect: CGRectMake(216.5, 325.5, 52, 15), cornerRadius: 7.5)
+        let rectangle4Path = UIBezierPath(roundedRect: CGRectMake(216.5, 310.5, 52, 15), cornerRadius: 7.5)
         UIColor.grayColor().setStroke()
         rectangle4Path.lineWidth = 3
         rectangle4Path.stroke()
@@ -201,8 +204,8 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 6 Drawing
         let bezier6Path = UIBezierPath()
-        bezier6Path.moveToPoint(CGPointMake(228.5, 324.5))
-        bezier6Path.addLineToPoint(CGPointMake(228.5, 340.5))
+        bezier6Path.moveToPoint(CGPointMake(228.5, 309.5))
+        bezier6Path.addLineToPoint(CGPointMake(228.5, 325.5))
         UIColor.grayColor().setStroke()
         bezier6Path.lineWidth = 3
         bezier6Path.stroke()
@@ -210,8 +213,8 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 8 Drawing
         let bezier8Path = UIBezierPath()
-        bezier8Path.moveToPoint(CGPointMake(257.5, 324.5))
-        bezier8Path.addLineToPoint(CGPointMake(257.5, 340.5))
+        bezier8Path.moveToPoint(CGPointMake(257.5, 309.5))
+        bezier8Path.addLineToPoint(CGPointMake(257.5, 325.5))
         UIColor.grayColor().setStroke()
         bezier8Path.lineWidth = 3
         bezier8Path.stroke()
@@ -219,8 +222,8 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 5 Drawing
         let bezier5Path = UIBezierPath()
-        bezier5Path.moveToPoint(CGPointMake(289.5, 332.5))
-        bezier5Path.addLineToPoint(CGPointMake(268.5, 332.5))
+        bezier5Path.moveToPoint(CGPointMake(289.5, 317.5))
+        bezier5Path.addLineToPoint(CGPointMake(268.5, 317.5))
         UIColor.grayColor().setStroke()
         bezier5Path.lineWidth = 3
         bezier5Path.stroke()
@@ -228,15 +231,15 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 9 Drawing
         let bezier9Path = UIBezierPath()
-        bezier9Path.moveToPoint(CGPointMake(181.5, 280.5))
-        bezier9Path.addLineToPoint(CGPointMake(181.5, 328.5))
+        bezier9Path.moveToPoint(CGPointMake(181.5, 265.5))
+        bezier9Path.addLineToPoint(CGPointMake(181.5, 313.5))
         UIColor.grayColor().setStroke()
         bezier9Path.lineWidth = 3
         bezier9Path.stroke()
 
 
         //// Oval 5 Drawing
-        let oval5Path = UIBezierPath(ovalInRect: CGRectMake(173.5, 324.5, 15, 15))
+        let oval5Path = UIBezierPath(ovalInRect: CGRectMake(173.5, 309.5, 15, 15))
         UIColor.whiteColor().setFill()
         oval5Path.fill()
         UIColor.grayColor().setStroke()
@@ -246,8 +249,8 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 10 Drawing
         let bezier10Path = UIBezierPath()
-        bezier10Path.moveToPoint(CGPointMake(215.5, 332.5))
-        bezier10Path.addLineToPoint(CGPointMake(189.5, 332.5))
+        bezier10Path.moveToPoint(CGPointMake(215.5, 317.5))
+        bezier10Path.addLineToPoint(CGPointMake(189.5, 317.5))
         UIColor.grayColor().setStroke()
         bezier10Path.lineWidth = 3
         bezier10Path.stroke()
@@ -255,8 +258,8 @@ public class PressureStyleKit : NSObject {
 
         //// Bezier 13 Drawing
         let bezier13Path = UIBezierPath()
-        bezier13Path.moveToPoint(CGPointMake(181.5, 339.5))
-        bezier13Path.addLineToPoint(CGPointMake(181.5, 363.5))
+        bezier13Path.moveToPoint(CGPointMake(181.5, 324.5))
+        bezier13Path.addLineToPoint(CGPointMake(181.5, 348.5))
         UIColor.grayColor().setStroke()
         bezier13Path.lineWidth = 3
         bezier13Path.stroke()
@@ -1700,6 +1703,40 @@ public class PressureStyleKit : NSObject {
         bezierPath.stroke()
     }
 
+    public class func drawCloseAdsBtn() {
+
+        //// Group
+        //// Text Drawing
+        let textPath = UIBezierPath()
+        textPath.moveToPoint(CGPointMake(4.38, 13.88))
+        textPath.addLineToPoint(CGPointMake(8.07, 8.94))
+        textPath.addLineToPoint(CGPointMake(4.81, 4.4))
+        textPath.addLineToPoint(CGPointMake(6.32, 4.4))
+        textPath.addLineToPoint(CGPointMake(8.05, 6.83))
+        textPath.addCurveToPoint(CGPointMake(8.82, 7.99), controlPoint1: CGPointMake(8.41, 7.33), controlPoint2: CGPointMake(8.66, 7.72))
+        textPath.addCurveToPoint(CGPointMake(9.57, 6.91), controlPoint1: CGPointMake(9.03, 7.65), controlPoint2: CGPointMake(9.28, 7.29))
+        textPath.addLineToPoint(CGPointMake(11.49, 4.4))
+        textPath.addLineToPoint(CGPointMake(12.86, 4.4))
+        textPath.addLineToPoint(CGPointMake(9.51, 8.87))
+        textPath.addLineToPoint(CGPointMake(13.12, 13.88))
+        textPath.addLineToPoint(CGPointMake(11.56, 13.88))
+        textPath.addLineToPoint(CGPointMake(9.16, 10.49))
+        textPath.addCurveToPoint(CGPointMake(8.74, 9.86), controlPoint1: CGPointMake(9.03, 10.3), controlPoint2: CGPointMake(8.89, 10.09))
+        textPath.addCurveToPoint(CGPointMake(8.29, 10.57), controlPoint1: CGPointMake(8.53, 10.21), controlPoint2: CGPointMake(8.38, 10.44))
+        textPath.addLineToPoint(CGPointMake(5.89, 13.88))
+        textPath.addLineToPoint(CGPointMake(4.38, 13.88))
+        textPath.closePath()
+        UIColor.grayColor().setFill()
+        textPath.fill()
+
+
+        //// Oval Drawing
+        let ovalPath = UIBezierPath(ovalInRect: CGRectMake(1.5, 1.5, 15, 15))
+        UIColor.grayColor().setStroke()
+        ovalPath.lineWidth = 1
+        ovalPath.stroke()
+    }
+
     //// Generated Images
 
     public class var imageOfParts: UIImage {
@@ -1926,6 +1963,20 @@ public class PressureStyleKit : NSObject {
         return Cache.imageOfNon6StartView!
     }
 
+    public class var imageOfCloseAdsBtn: UIImage {
+        if Cache.imageOfCloseAdsBtn != nil {
+            return Cache.imageOfCloseAdsBtn!
+        }
+
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(18, 18), false, 0)
+            PressureStyleKit.drawCloseAdsBtn()
+
+        Cache.imageOfCloseAdsBtn = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return Cache.imageOfCloseAdsBtn!
+    }
+
     //// Customization Infrastructure
 
     @IBOutlet var partsTargets: [AnyObject]! {
@@ -2084,6 +2135,16 @@ public class PressureStyleKit : NSObject {
             Cache.non6StartViewTargets = newValue
             for target: AnyObject in newValue {
                 target.performSelector("setImage:", withObject: PressureStyleKit.imageOfNon6StartView)
+            }
+        }
+    }
+
+    @IBOutlet var closeAdsBtnTargets: [AnyObject]! {
+        get { return Cache.closeAdsBtnTargets }
+        set {
+            Cache.closeAdsBtnTargets = newValue
+            for target: AnyObject in newValue {
+                target.performSelector("setImage:", withObject: PressureStyleKit.imageOfCloseAdsBtn)
             }
         }
     }
