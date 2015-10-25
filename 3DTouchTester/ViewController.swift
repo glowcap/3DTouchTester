@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
     
-    var compatible = false
+    var compatible = true
     var fillColor: UIColor!
     var finalCheckReady = false
     var finalCheckDone = false
@@ -70,7 +70,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
         super.viewDidLoad()
         adBannerView.delegate = self
         adBannerView.hidden = true
-        print(adBannerView.frame.height)
         
         checkForceCapability()
         setTapGestures()
@@ -408,8 +407,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
 //MARK: Ads functions
     
     @IBAction func closeAdsTapped(sender: UIButton) {
-        print("close ads tapped")
-        
         let actionSheetController = UIAlertController(title: "", message: "Disable Ads", preferredStyle: .ActionSheet)
         let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
