@@ -14,12 +14,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
-    
-    var compatible = true
+    var compatible = false
     var fillColor: UIColor!
     var finalCheckReady = false
     var finalCheckDone = false
-    var springIsSet = false
 
     var forceAmount: CGFloat = 0.0
     lazy var timer = NSTimer()
@@ -84,6 +82,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+//        print("called")
+//            if userDefaults.boolForKey("springSet") == true {
+//                animateSpring(0.1, delay: 0.0)
+//            }
 
         setUpImageViews()
         binaryLabel.text = "00110011 01000100 00100000 01110100\n01101111 01110101 01100011 01101000"
@@ -139,7 +141,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
         if finalCheckReady {
             infoBoardLabel.text = "01110100 01100101 01110011 01110100"
             animateBtnConnector()
-            animateSpring()
+            animateSpring(0.5, delay: 0.4)
             animateBtnCenter()
             afterDelay(1.1){self.finalCheckDone = true}
             finalCheckReady = false
@@ -348,13 +350,13 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
             })
     }
     
-    func animateSpring() {
+    func animateSpring(duration: Double, delay: Double) {
         let btnSXPos = btnSignalImgView.frame.origin.x
         let btnSYPos = btnSignalImgView.frame.origin.y
         
         let sWidth = springView.bounds.width
         let sHeight = springView.bounds.height
-        UIView.animateWithDuration(0.5, delay: 0.4, options: [], animations: {
+        UIView.animateWithDuration(duration, delay: delay, options: [], animations: {
             self.afterDelay(0.4){
                 if self.compatible {
                     self.btnSignalImgView.image = PressureStyleKit.imageOfBtnSignalGreen
@@ -369,8 +371,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
                 y: self.springView.frame.origin.y,
                 width: sWidth + 5, height: sHeight - 15)
             }, completion: {finish in
-                let userDefaults = NSUserDefaults.standardUserDefaults()
-                self.springIsSet = true
+                self.userDefaults.setBool(true, forKey: "springSet")
             })
     }
     
