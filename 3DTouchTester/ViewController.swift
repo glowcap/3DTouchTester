@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
     var fillColor: UIColor!
     var finalCheckReady = false
     var finalCheckDone = false
+    var springIsSet = false
 
     var forceAmount: CGFloat = 0.0
     lazy var timer = NSTimer()
@@ -369,8 +370,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
                 width: sWidth + 5, height: sHeight - 15)
             }, completion: {finish in
                 let userDefaults = NSUserDefaults.standardUserDefaults()
-//MARK: ********fix spring height on return from view!! ******
-                userDefaults.setDouble(Double(self.springView.frame.height), forKey: "SpringHeight")
+                self.springIsSet = true
             })
     }
     
