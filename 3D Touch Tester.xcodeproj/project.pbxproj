@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83489B231C7E8D9E0093905A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 83489B221C7E8D9E0093905A /* .gitignore */; };
 		837C5B521BD86C830002A749 /* EAAnimationDelayed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C5B491BD86C830002A749 /* EAAnimationDelayed.swift */; };
 		837C5B531BD86C830002A749 /* EasyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C5B4B1BD86C830002A749 /* EasyAnimation.swift */; };
 		837C5B541BD86C830002A749 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 837C5B4C1BD86C830002A749 /* Info.plist */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83489B221C7E8D9E0093905A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		837C5B491BD86C830002A749 /* EAAnimationDelayed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAAnimationDelayed.swift; sourceTree = "<group>"; };
 		837C5B4A1BD86C830002A749 /* EasyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyAnimation.h; sourceTree = "<group>"; };
 		837C5B4B1BD86C830002A749 /* EasyAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyAnimation.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		838593551BD71AB9008AB3AD = {
 			isa = PBXGroup;
 			children = (
+				83489B221C7E8D9E0093905A /* .gitignore */,
 				838593601BD71AB9008AB3AD /* 3DTouchTester */,
 				8385935F1BD71AB9008AB3AD /* Products */,
 			);
@@ -141,6 +144,11 @@
 					8385935D1BD71AB9008AB3AD = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = NT4ZPH7Z6M;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -171,6 +179,7 @@
 				8385936C1BD71AB9008AB3AD /* LaunchScreen.storyboard in Resources */,
 				838593691BD71AB9008AB3AD /* Assets.xcassets in Resources */,
 				838593671BD71AB9008AB3AD /* Main.storyboard in Resources */,
+				83489B231C7E8D9E0093905A /* .gitignore in Resources */,
 				837C5B551BD86C830002A749 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +311,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3DTouchTester",
+				);
 				INFOPLIST_FILE = 3DTouchTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Daymein.Gregorio.3DTouchTester;
@@ -315,6 +328,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3DTouchTester",
+				);
 				INFOPLIST_FILE = 3DTouchTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Daymein.Gregorio.3DTouchTester;

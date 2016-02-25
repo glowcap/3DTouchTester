@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
         return true
     }
 
@@ -33,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         let mainVC = self.window!.rootViewController as! ViewController
         if userDefaults.boolForKey("springSet") {
-            print("called Active")
             mainVC.animateSpring(0.1, delay: 0.0)
         }
     }

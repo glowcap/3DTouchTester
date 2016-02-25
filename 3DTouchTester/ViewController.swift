@@ -8,9 +8,8 @@
 
 import UIKit
 import Dispatch
-import iAd
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerViewDelegate {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -33,7 +32,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
     let darkYellow = UIColor(red: 153/255, green: 125/255, blue: 10/255, alpha: 1)
     let blue = UIColor(red: 45/255, green: 168/255, blue: 255, alpha: 1)
     
-    @IBOutlet weak var adBannerView: ADBannerView!
+
     @IBOutlet weak var closeAdsBtn: UIButton!
     @IBOutlet weak var infoBrdLeadConstraint: NSLayoutConstraint!
     @IBOutlet weak var warningLabel: UILabel!
@@ -67,9 +66,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        adBannerView.delegate = self
-        adBannerView.hidden = true
-        
+
         checkForceCapability()
         setTapGestures()
         animateSixSignal()
@@ -243,7 +240,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
         signalLampImgView.image = PressureStyleKit.imageOfLightUpCircleOff
         btnSignalImgView.image = PressureStyleKit.imageOfBtnSignalTest
         btnBaseImgView.image = PressureStyleKit.imageOfButtonBase
-        closeAdsBtn.setImage(PressureStyleKit.imageOfCloseAdsBtn, forState: .Normal)
     }
     
     
@@ -403,26 +399,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ADBannerVie
     func afterDelay(seconds: Double, closure: ()->() ) {
         let when = dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC)))
         dispatch_after(when, dispatch_get_main_queue(), closure)
-    }
-    
-//MARK: Ads functions
-    
-    @IBAction func closeAdsTapped(sender: UIButton) {
-        let actionSheetController = UIAlertController(title: "", message: "Disable Ads", preferredStyle: .ActionSheet)
-        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        
-        actionSheetController.addAction(okAction)
-        actionSheetController.addAction(cancelAction)
-        presentViewController(actionSheetController, animated: true, completion: nil)
-    }
-    
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        adBannerView.hidden = false
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        print(error)
     }
 }
 
