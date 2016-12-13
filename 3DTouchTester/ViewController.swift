@@ -11,7 +11,7 @@ import Dispatch
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let userDefaults = UserDefaults.standard
     
     var compatible = false
     var fillColor: UIColor!
@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     var finalCheckDone = false
 
     var forceAmount: CGFloat = 0.0
-    lazy var timer = NSTimer()
+    lazy var timer = Timer()
     var timerIsRunning = false
     var seconds = 0
     
@@ -77,7 +77,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        print("called")
 //            if userDefaults.boolForKey("springSet") == true {
@@ -96,7 +96,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func checkForceCapability() {
         switch self.traitCollection.forceTouchCapability {
-        case .Available: compatible = true
+        case .available: compatible = true
         default:
             compatible = false
         }
@@ -111,15 +111,15 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func not6Adjustments() {
         let warningString = "Warning!\nUnsupported Device."
-        non6BaseView.hidden = false
+        non6BaseView.isHidden = false
         warningLabel.text = warningString
-        warningLabel.hidden = false
+        warningLabel.isHidden = false
         infoBrdLeadConstraint.constant += 20
     }
     
     func enableFinalCheckBtn() {
         afterDelay(0.4){
-            self.btnLabel.textColor = UIColor.clearColor()
+            self.btnLabel.textColor = UIColor.clear
             self.finalCheckReady = true
             self.btnPressLabel.textColor = UIColor(red: 111/255, green: 111/255, blue: 111/255, alpha: 1)
         }
@@ -128,8 +128,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
 //MARK: Tap Gesture functions
     func setTapGestures() {
-        let tapCenter = UITapGestureRecognizer(target: self, action: "handleTap")
-        let tapNon = UITapGestureRecognizer(target: self, action: "handleTap")
+        let tapCenter = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap))
+        let tapNon = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap))
         btnCenter.addGestureRecognizer(tapCenter)
         non6BtnTopView.addGestureRecognizer(tapNon)
     }
@@ -153,39 +153,39 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
     
 //MARK: Set Up Touches
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if finalCheckDone {
             testTouches(touches)
         }
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if finalCheckDone {
             testTouches(touches)
         }
     }
     
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         if finalCheckDone {
-            testTouches(touches!)
+            testTouches(touches)
             if compatible {
-                binaryLabel.textColor = UIColor.whiteColor()
+                binaryLabel.textColor = UIColor.white
                 percentageLabel.text = "0%"
             }
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if finalCheckDone {
             testTouches(touches)
             if compatible {
-                binaryLabel.textColor = UIColor.whiteColor()
+                binaryLabel.textColor = UIColor.white
                 percentageLabel.text = "0%"
             }
         }
     }
     
-    func handleTouch(touch:UITouch) {
+    func handleTouch(_ touch:UITouch) {
         if finalCheckDone {
             if compatible {
                 forceAmount = touch.force / touch.maximumPossibleForce
@@ -200,14 +200,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    func testTouches(touches: Set<UITouch>) {
+    func testTouches(_ touches: Set<UITouch>) {
         // Get the first touch and its location
         let touch = touches.first
-        let touchLocation = touch!.locationInView(self.view)
+        let touchLocation = touch!.location(in: self.view)
         
-        let btnViewFrame = view.convertRect(btnCenter.frame, fromView: btnCenter.superview)
+        let btnViewFrame = view.convert(btnCenter.frame, from: btnCenter.superview)
         
-        if CGRectContainsPoint(btnViewFrame, touchLocation) {
+        if btnViewFrame.contains(touchLocation) {
             handleTouch(touch!)
         }
     }
@@ -216,7 +216,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 //MARK: Timer functions
     func startTimer() {
         if !timerIsRunning {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "countTime", userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.countTime), userInfo: nil, repeats: true)
             timerIsRunning = true
         }
     }
@@ -267,8 +267,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func animateSixSignalLight() {
-        let loop:UIViewAnimationOptions = [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat]
-        UIView.animateWithDuration(0.7, delay: 0.0, options: loop, animations: {
+        let loop:UIViewAnimationOptions = [UIViewAnimationOptions.autoreverse, UIViewAnimationOptions.repeat]
+        UIView.animate(withDuration: 0.7, delay: 0.0, options: loop, animations: {
             self.sixSignalLight.backgroundColor = self.darkYellow
         }, completion: nil)
 
@@ -278,81 +278,86 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         let sixXPos = sixSignalConnectorView.frame.origin.x
         let sixYPos = sixSignalConnectorView.frame.origin.y
         
-        UIView.animateAndChainWithDuration(1.0, delay: 0.0, options: [], animations: {
+        UIView.animateAndChain(withDuration: 1.0, delay: 0.0, options: [], animations: {
             self.sixSignalConnectorView.frame = CGRect(x: sixXPos + 18, y: sixYPos,
-                width: self.sixSignalConnectorView.frame.width,
-                height: self.sixSignalConnectorView.frame.height)
-            }, completion: {finish in
-                var lightColor:UIImage!
-                if self.compatible {
-                    lightColor = PressureStyleKit.imageOfLightUpCircleOn
-                    self.fillColor = self.green
-                    self.infoBoardLabel.text = "Final Check.\nTap button to confirm force sensitivity."
-                } else {
-                    lightColor = PressureStyleKit.imageOfLightUpCircleFail
-                    self.fillColor = self.red
-                    self.infoBoardLabel.textColor = self.fillColor
-                    self.infoBoardLabel.text = "Unsupported Device.\nTap button to continue."
-                }
-                self.enableFinalCheckBtn()
-                self.signalLampImgView.image = lightColor}).animateWithDuration(0.4, animations: {
-                self.verticalFill.backgroundColor = self.fillColor
-                self.btnBaseImgView.backgroundColor = self.green
-                self.non6BtnColorView.backgroundColor = self.green
-                self.nonTapLabel.textColor = self.gray
-                })
-    }
+                                                       width: self.sixSignalConnectorView.frame.width,
+                                                       height: self.sixSignalConnectorView.frame.height)
+        }, completion: {finish in
+            print("completed")
+            var lightColor:UIImage!
+            if self.compatible {
+                lightColor = PressureStyleKit.imageOfLightUpCircleOn
+                self.fillColor = self.green
+                self.infoBoardLabel.text = "Final Check.\nTap button to confirm force sensitivity."
+            } else {
+                lightColor = PressureStyleKit.imageOfLightUpCircleFail
+                self.fillColor = self.red
+                self.infoBoardLabel.textColor = self.fillColor
+                self.infoBoardLabel.text = "Unsupported Device.\nTap button to continue."
+            }
+             self.enableFinalCheckBtn()
+            self.signalLampImgView.image = lightColor
+        }).animate(withDuration: 0.4, animations: {
+            self.verticalFill.backgroundColor = self.fillColor
+            self.btnBaseImgView.backgroundColor = self.green
+            self.non6BtnColorView.backgroundColor = self.green
+            self.nonTapLabel.textColor = self.gray
+        })
+        
     
+           }
+
     func animateBtnConnector() {
         let btnCXPos = btnConnectorView.frame.origin.x
         let btnCYPos = btnConnectorView.frame.origin.y
         
         btnBaseImgView.backgroundColor = self.yellow
         non6BtnColorView.backgroundColor = self.yellow
-        nonTapLabel.textColor = UIColor.clearColor()
-        btnPressLabel.textColor = UIColor.clearColor()
-        btnLabel.textColor = UIColor.whiteColor()
-        UIView.animateAndChainWithDuration(1.0, delay: 0.0, options: [], animations: {
+        nonTapLabel.textColor = UIColor.clear
+        btnPressLabel.textColor = UIColor.clear
+        btnLabel.textColor = UIColor.white
+        
+        UIView.animateAndChain(withDuration: 1.0, delay: 0.0, options: [], animations: {
             self.btnConnectorView.frame = CGRect(x: btnCXPos, y: btnCYPos - 30,
-                width: self.btnConnectorView.frame.width,
-                height: self.btnConnectorView.frame.height)
-            }, completion: nil).animateWithDuration(0.4, animations: {
-                    self.horizontalFill.backgroundColor = self.fillColor
-                self.afterDelay(0.4){
-                    if !self.compatible {
-                        self.forceLabel.text = "ERROR!"
-                        self.forceLabel.textColor = self.fillColor
-                        self.infoBoardLabel.textColor = self.fillColor
-                        self.infoBoardLabel.text = "Unsupported Device\nSwitching to\nTimer Mode."
-                        self.afterDelay(1.2){
-                            self.percentageLabel.textColor = self.blue
-                            self.infoBoardLabel.textColor = self.blue
-                            self.forceLabel.textColor = self.blue
-                            self.percentageLabel.text = "0"
-                            self.forceLabel.text = "SECONDS"
-                            self.infoBoardLabel.text = "Timer Mode\nTap button to start and stop timer."
-                        }
-                    } else {
-                        self.percentageLabel.textColor = self.pink
-                        self.infoBoardLabel.text = "System Ready.\nHold the button to begin testing."
+            width: self.btnConnectorView.frame.width,
+            height: self.btnConnectorView.frame.height)
+        }, completion: nil).animate(withDuration: 0.4, animations: {
+            self.horizontalFill.backgroundColor = self.fillColor
+            self.afterDelay(0.4){
+                if !self.compatible {
+                    self.forceLabel.text = "ERROR!"
+                    self.forceLabel.textColor = self.fillColor
+                    self.infoBoardLabel.textColor = self.fillColor
+                    self.infoBoardLabel.text = "Unsupported Device\nSwitching to\nTimer Mode."
+                    self.afterDelay(1.2){
+                        self.percentageLabel.textColor = self.blue
+                        self.infoBoardLabel.textColor = self.blue
+                        self.forceLabel.textColor = self.blue
+                        self.percentageLabel.text = "0"
+                        self.forceLabel.text = "SECONDS"
+                        self.infoBoardLabel.text = "Timer Mode\nTap button to start and stop timer."
                     }
-                    self.btnLabel.textColor = UIColor.clearColor()
-                    self.btnHoldLabel.textColor = self.gray
+                } else {
+                    self.percentageLabel.textColor = self.pink
+                    self.infoBoardLabel.text = "System Ready.\nHold the button to begin testing."
                 }
-            }).animateWithDuration(0.3, animations: {
-                self.btnBaseImgView.backgroundColor = self.green
-                self.non6BtnColorView.backgroundColor = self.green
-                self.nonTapLabel.textColor = self.gray
-            })
+                self.btnLabel.textColor = UIColor.clear
+                self.btnHoldLabel.textColor = self.gray
+            }
+        }).animate(withDuration: 0.3, animations: {
+            self.btnBaseImgView.backgroundColor = self.green
+            self.non6BtnColorView.backgroundColor = self.green
+            self.nonTapLabel.textColor = self.gray
+        })
     }
     
-    func animateSpring(duration: Double, delay: Double) {
+    func animateSpring(_ duration: Double, delay: Double) {
         let btnSXPos = btnSignalImgView.frame.origin.x
         let btnSYPos = btnSignalImgView.frame.origin.y
         
         let sWidth = springView.bounds.width
         let sHeight = springView.bounds.height
-        UIView.animateWithDuration(duration, delay: delay, options: [], animations: {
+        UIView.animate(withDuration: duration, delay: delay, options: [], animations: {
             self.afterDelay(0.4){
                 if self.compatible {
                     self.btnSignalImgView.image = PressureStyleKit.imageOfBtnSignalGreen
@@ -367,7 +372,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 y: self.springView.frame.origin.y,
                 width: sWidth + 5, height: sHeight - 15)
             }, completion: {finish in
-                self.userDefaults.setBool(true, forKey: "springSet")
+                self.userDefaults.set(true, forKey: "springSet")
             })
     }
     
@@ -375,30 +380,30 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         let duration = 1.0
         let delay = 0.0
         let fullRotation = CGFloat(M_PI * 2)
-        let options = UIViewKeyframeAnimationOptions.CalculationModePaced
+        let options = UIViewKeyframeAnimationOptions.calculationModePaced
         
-        UIView.animateKeyframesWithDuration(duration, delay: delay, options: options, animations: {
+        UIView.animateKeyframes(withDuration: duration, delay: delay, options: options, animations: {
             
             // note that we've set relativeStartTime and relativeDuration to zero.
             // Because we're using `CalculationModePaced` these values are ignored
             // and iOS figures out values that are needed to create a smooth constant transition
-            UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0, animations: {
-                self.btnCenter.transform = CGAffineTransformMakeRotation(1/3 * fullRotation)
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+                self.btnCenter.transform = CGAffineTransform(rotationAngle: 1/3 * fullRotation)
             })
-            UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0, animations: {
-                self.btnCenter.transform = CGAffineTransformMakeRotation(2/3 * fullRotation)
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+                self.btnCenter.transform = CGAffineTransform(rotationAngle: 2/3 * fullRotation)
             })
-            UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0, animations: {
-                self.btnCenter.transform = CGAffineTransformMakeRotation(3/3 * fullRotation)
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+                self.btnCenter.transform = CGAffineTransform(rotationAngle: 3/3 * fullRotation)
             })
             }, completion: nil)
     }
 
     
 //MARK: Dispatch function
-    func afterDelay(seconds: Double, closure: ()->() ) {
-        let when = dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC)))
-        dispatch_after(when, dispatch_get_main_queue(), closure)
+    func afterDelay(_ seconds: Double, closure: @escaping ()->() ) {
+        let when = DispatchTime.now() + Double(Int64(seconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
 }
 

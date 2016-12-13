@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83489B231C7E8D9E0093905A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 83489B221C7E8D9E0093905A /* .gitignore */; };
-		837C5B521BD86C830002A749 /* EAAnimationDelayed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C5B491BD86C830002A749 /* EAAnimationDelayed.swift */; };
-		837C5B531BD86C830002A749 /* EasyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C5B4B1BD86C830002A749 /* EasyAnimation.swift */; };
-		837C5B541BD86C830002A749 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 837C5B4C1BD86C830002A749 /* Info.plist */; };
-		837C5B551BD86C830002A749 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 837C5B4E1BD86C830002A749 /* LICENSE */; };
-		837C5B561BD86C830002A749 /* RBBBlockBasedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C5B4F1BD86C830002A749 /* RBBBlockBasedArray.swift */; };
-		837C5B571BD86C830002A749 /* RBBLinearInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C5B501BD86C830002A749 /* RBBLinearInterpolation.swift */; };
-		837C5B581BD86C830002A749 /* RBBSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C5B511BD86C830002A749 /* RBBSpringAnimation.swift */; };
 		838593621BD71AB9008AB3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838593611BD71AB9008AB3AD /* AppDelegate.swift */; };
 		838593641BD71AB9008AB3AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838593631BD71AB9008AB3AD /* ViewController.swift */; };
 		838593671BD71AB9008AB3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838593651BD71AB9008AB3AD /* Main.storyboard */; };
@@ -22,18 +14,17 @@
 		8385936C1BD71AB9008AB3AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385936A1BD71AB9008AB3AD /* LaunchScreen.storyboard */; };
 		838593741BD71AE7008AB3AD /* PressureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838593731BD71AE7008AB3AD /* PressureView.swift */; };
 		838593761BD71B02008AB3AD /* PressureStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838593751BD71B02008AB3AD /* PressureStyleKit.swift */; };
+		83EE9EBA1DF6504F00F4625F /* EAAnimationFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE9EB01DF6504F00F4625F /* EAAnimationFuture.swift */; };
+		83EE9EBB1DF6504F00F4625F /* EasyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE9EB21DF6504F00F4625F /* EasyAnimation.swift */; };
+		83EE9EBC1DF6504F00F4625F /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83EE9EB31DF6504F00F4625F /* Info-tvOS.plist */; };
+		83EE9EBD1DF6504F00F4625F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83EE9EB41DF6504F00F4625F /* Info.plist */; };
+		83EE9EBE1DF6504F00F4625F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 83EE9EB61DF6504F00F4625F /* LICENSE */; };
+		83EE9EBF1DF6504F00F4625F /* RBBBlockBasedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE9EB71DF6504F00F4625F /* RBBBlockBasedArray.swift */; };
+		83EE9EC01DF6504F00F4625F /* RBBLinearInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE9EB81DF6504F00F4625F /* RBBLinearInterpolation.swift */; };
+		83EE9EC11DF6504F00F4625F /* RBBSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE9EB91DF6504F00F4625F /* RBBSpringAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83489B221C7E8D9E0093905A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		837C5B491BD86C830002A749 /* EAAnimationDelayed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAAnimationDelayed.swift; sourceTree = "<group>"; };
-		837C5B4A1BD86C830002A749 /* EasyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyAnimation.h; sourceTree = "<group>"; };
-		837C5B4B1BD86C830002A749 /* EasyAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyAnimation.swift; sourceTree = "<group>"; };
-		837C5B4C1BD86C830002A749 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		837C5B4E1BD86C830002A749 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		837C5B4F1BD86C830002A749 /* RBBBlockBasedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBBlockBasedArray.swift; sourceTree = "<group>"; };
-		837C5B501BD86C830002A749 /* RBBLinearInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBLinearInterpolation.swift; sourceTree = "<group>"; };
-		837C5B511BD86C830002A749 /* RBBSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBSpringAnimation.swift; sourceTree = "<group>"; };
 		8385935E1BD71AB9008AB3AD /* 3D Touch Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D Touch Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		838593611BD71AB9008AB3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838593631BD71AB9008AB3AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +34,15 @@
 		8385936D1BD71AB9008AB3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838593731BD71AE7008AB3AD /* PressureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PressureView.swift; sourceTree = "<group>"; };
 		838593751BD71B02008AB3AD /* PressureStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PressureStyleKit.swift; sourceTree = "<group>"; };
+		83EE9EB01DF6504F00F4625F /* EAAnimationFuture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAAnimationFuture.swift; sourceTree = "<group>"; };
+		83EE9EB11DF6504F00F4625F /* EasyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyAnimation.h; sourceTree = "<group>"; };
+		83EE9EB21DF6504F00F4625F /* EasyAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyAnimation.swift; sourceTree = "<group>"; };
+		83EE9EB31DF6504F00F4625F /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		83EE9EB41DF6504F00F4625F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83EE9EB61DF6504F00F4625F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		83EE9EB71DF6504F00F4625F /* RBBBlockBasedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBBlockBasedArray.swift; sourceTree = "<group>"; };
+		83EE9EB81DF6504F00F4625F /* RBBLinearInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBLinearInterpolation.swift; sourceTree = "<group>"; };
+		83EE9EB91DF6504F00F4625F /* RBBSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBSpringAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,33 +56,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		837C5B481BD86C830002A749 /* EasyAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				837C5B491BD86C830002A749 /* EAAnimationDelayed.swift */,
-				837C5B4A1BD86C830002A749 /* EasyAnimation.h */,
-				837C5B4B1BD86C830002A749 /* EasyAnimation.swift */,
-				837C5B4C1BD86C830002A749 /* Info.plist */,
-				837C5B4D1BD86C830002A749 /* RBBSpringAnimation */,
-			);
-			path = EasyAnimation;
-			sourceTree = "<group>";
-		};
-		837C5B4D1BD86C830002A749 /* RBBSpringAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				837C5B4E1BD86C830002A749 /* LICENSE */,
-				837C5B4F1BD86C830002A749 /* RBBBlockBasedArray.swift */,
-				837C5B501BD86C830002A749 /* RBBLinearInterpolation.swift */,
-				837C5B511BD86C830002A749 /* RBBSpringAnimation.swift */,
-			);
-			path = RBBSpringAnimation;
-			sourceTree = "<group>";
-		};
 		838593551BD71AB9008AB3AD = {
 			isa = PBXGroup;
 			children = (
-				83489B221C7E8D9E0093905A /* .gitignore */,
 				838593601BD71AB9008AB3AD /* 3DTouchTester */,
 				8385935F1BD71AB9008AB3AD /* Products */,
 			);
@@ -103,13 +79,37 @@
 				838593631BD71AB9008AB3AD /* ViewController.swift */,
 				838593731BD71AE7008AB3AD /* PressureView.swift */,
 				838593751BD71B02008AB3AD /* PressureStyleKit.swift */,
+				83EE9EAF1DF6504F00F4625F /* EasyAnimation */,
 				838593651BD71AB9008AB3AD /* Main.storyboard */,
-				837C5B481BD86C830002A749 /* EasyAnimation */,
 				838593681BD71AB9008AB3AD /* Assets.xcassets */,
 				8385936A1BD71AB9008AB3AD /* LaunchScreen.storyboard */,
 				8385936D1BD71AB9008AB3AD /* Info.plist */,
 			);
 			path = 3DTouchTester;
+			sourceTree = "<group>";
+		};
+		83EE9EAF1DF6504F00F4625F /* EasyAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				83EE9EB01DF6504F00F4625F /* EAAnimationFuture.swift */,
+				83EE9EB11DF6504F00F4625F /* EasyAnimation.h */,
+				83EE9EB21DF6504F00F4625F /* EasyAnimation.swift */,
+				83EE9EB31DF6504F00F4625F /* Info-tvOS.plist */,
+				83EE9EB41DF6504F00F4625F /* Info.plist */,
+				83EE9EB51DF6504F00F4625F /* RBBSpringAnimation */,
+			);
+			path = EasyAnimation;
+			sourceTree = "<group>";
+		};
+		83EE9EB51DF6504F00F4625F /* RBBSpringAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				83EE9EB61DF6504F00F4625F /* LICENSE */,
+				83EE9EB71DF6504F00F4625F /* RBBBlockBasedArray.swift */,
+				83EE9EB81DF6504F00F4625F /* RBBLinearInterpolation.swift */,
+				83EE9EB91DF6504F00F4625F /* RBBSpringAnimation.swift */,
+			);
+			path = RBBSpringAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,12 +138,13 @@
 		838593561BD71AB9008AB3AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Daymein Gregorio";
 				TargetAttributes = {
 					8385935D1BD71AB9008AB3AD = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = NT4ZPH7Z6M;
+						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -175,12 +176,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837C5B541BD86C830002A749 /* Info.plist in Resources */,
+				83EE9EBE1DF6504F00F4625F /* LICENSE in Resources */,
 				8385936C1BD71AB9008AB3AD /* LaunchScreen.storyboard in Resources */,
 				838593691BD71AB9008AB3AD /* Assets.xcassets in Resources */,
+				83EE9EBC1DF6504F00F4625F /* Info-tvOS.plist in Resources */,
+				83EE9EBD1DF6504F00F4625F /* Info.plist in Resources */,
 				838593671BD71AB9008AB3AD /* Main.storyboard in Resources */,
-				83489B231C7E8D9E0093905A /* .gitignore in Resources */,
-				837C5B551BD86C830002A749 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,15 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837C5B571BD86C830002A749 /* RBBLinearInterpolation.swift in Sources */,
-				837C5B561BD86C830002A749 /* RBBBlockBasedArray.swift in Sources */,
-				837C5B581BD86C830002A749 /* RBBSpringAnimation.swift in Sources */,
+				83EE9EC01DF6504F00F4625F /* RBBLinearInterpolation.swift in Sources */,
+				83EE9EBF1DF6504F00F4625F /* RBBBlockBasedArray.swift in Sources */,
+				83EE9EC11DF6504F00F4625F /* RBBSpringAnimation.swift in Sources */,
+				83EE9EBA1DF6504F00F4625F /* EAAnimationFuture.swift in Sources */,
 				838593741BD71AE7008AB3AD /* PressureView.swift in Sources */,
+				83EE9EBB1DF6504F00F4625F /* EasyAnimation.swift in Sources */,
 				838593641BD71AB9008AB3AD /* ViewController.swift in Sources */,
-				837C5B531BD86C830002A749 /* EasyAnimation.swift in Sources */,
 				838593621BD71AB9008AB3AD /* AppDelegate.swift in Sources */,
 				838593761BD71B02008AB3AD /* PressureStyleKit.swift in Sources */,
-				837C5B521BD86C830002A749 /* EAAnimationDelayed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,8 +239,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -282,8 +285,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -302,6 +307,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -319,6 +325,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Daymein.Gregorio.3DTouchTester;
 				PRODUCT_NAME = "3D Touch Tester";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -336,6 +343,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Daymein.Gregorio.3DTouchTester;
 				PRODUCT_NAME = "3D Touch Tester";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

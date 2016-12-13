@@ -11,35 +11,35 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var userDefaults = NSUserDefaults.standardUserDefaults()
+    var userDefaults = UserDefaults.standard
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         let mainVC = self.window!.rootViewController as! ViewController
         if mainVC.timerIsRunning { mainVC.timer.invalidate()}
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         let mainVC = self.window!.rootViewController as! ViewController
-        if userDefaults.boolForKey("springSet") {
+        if userDefaults.bool(forKey: "springSet") {
             mainVC.animateSpring(0.1, delay: 0.0)
         }
     }
 
-    func applicationWillTerminate(application: UIApplication) {
-        userDefaults.setBool(false, forKey: "springSet")
+    func applicationWillTerminate(_ application: UIApplication) {
+        userDefaults.set(false, forKey: "springSet")
     }
 
 
