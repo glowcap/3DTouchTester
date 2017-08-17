@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bd3bb57be57b4a979d34546a3b961d0a)](https://www.codacy.com/app/daymeing/3DTouchTester?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=glowcap/3DTouchTester&amp;utm_campaign=Badge_Grade)
 # DG-3DTouchTester
 Simple app to demonstrate 3DTouch pressure on iPhone6s and iPhone6s+
 
