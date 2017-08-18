@@ -374,7 +374,7 @@ open class PressureStyleKit : NSObject {
 
         let textTextHeight: CGFloat = textTextContent.boundingRect(with: CGSizeMake(textRect.width, CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
         context?.saveGState()
-        context?.clip(to: textRect);
+        context?.clip(to: textRect)
         textTextContent.draw(in: CGRectMake(textRect.minX, textRect.minY + (textRect.height - textTextHeight) / 2, textRect.width, textTextHeight), withAttributes: textFontAttributes)
         context?.restoreGState()
 
@@ -389,7 +389,7 @@ open class PressureStyleKit : NSObject {
 
         let text2TextHeight: CGFloat = text2TextContent.boundingRect(with: CGSizeMake(text2Rect.width, CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: text2FontAttributes, context: nil).size.height
         context?.saveGState()
-        context?.clip(to: text2Rect);
+        context?.clip(to: text2Rect)
         text2TextContent.draw(in: CGRectMake(text2Rect.minX, text2Rect.minY + (text2Rect.height - text2TextHeight) / 2, text2Rect.width, text2TextHeight), withAttributes: text2FontAttributes)
         context?.restoreGState()
 
@@ -664,7 +664,7 @@ open class PressureStyleKit : NSObject {
 
         let text4TextHeight: CGFloat = text4TextContent.boundingRect(with: CGSizeMake(text4Rect.width, CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: text4FontAttributes, context: nil).size.height
         context?.saveGState()
-        context?.clip(to: text4Rect);
+        context?.clip(to: text4Rect)
         text4TextContent.draw(in: CGRectMake(text4Rect.minX, text4Rect.minY + (text4Rect.height - text4TextHeight) / 2, text4Rect.width, text4TextHeight), withAttributes: text4FontAttributes)
         context?.restoreGState()
 
@@ -724,7 +724,7 @@ open class PressureStyleKit : NSObject {
         bezier12Path.addLine(to: CGPointMake(189.5, 399.89))
         bezier12Path.addLine(to: CGPointMake(163.5, 418.78))
         bezier12Path.addLine(to: CGPointMake(180.5, 432))
-        bezier12Path.lineJoinStyle = .bevel;
+        bezier12Path.lineJoinStyle = .bevel
 
         UIColor.gray.setStroke()
         bezier12Path.lineWidth = 3
@@ -1289,7 +1289,7 @@ open class PressureStyleKit : NSObject {
         bezier12Path.addLine(to: CGPointMake(27.5, 34.5))
         bezier12Path.addLine(to: CGPointMake(1.5, 53.86))
         bezier12Path.addLine(to: CGPointMake(14.5, 65.5))
-        bezier12Path.lineJoinStyle = .bevel;
+        bezier12Path.lineJoinStyle = .bevel
 
         UIColor.gray.setStroke()
         bezier12Path.lineWidth = 3

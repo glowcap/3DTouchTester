@@ -25,7 +25,7 @@ class RBBSpringAnimation: CAKeyframeAnimation {
     
     var allowsOverdamping: Bool = true
     
-    typealias RBBAnimationBlock = (CGFloat, CGFloat) -> Any //(t, duration)
+    typealias RBBAnimationBlock = (CGFloat, CGFloat) -> Any // (t, duration)
     
     var mass: Double = 1.0
     var stiffness: Double = 0.0
@@ -96,7 +96,7 @@ class RBBSpringAnimation: CAKeyframeAnimation {
             beta = omega0
         }
         
-        var oscillation: (CGFloat)->CGFloat
+        var oscillation: (CGFloat) -> CGFloat
         
         if beta < omega0 {
             // Underdamped
@@ -106,13 +106,13 @@ class RBBSpringAnimation: CAKeyframeAnimation {
                 let part2: CGFloat = x0 * cos(omega1 * t)
                 let part3: CGFloat = ((beta * x0 + v0) / omega1) * sin(omega1 * t)
                 return -x0 + envelope * (part2 + part3)
-            };
+            }
         } else if beta == omega0 {
             // Critically damped
             oscillation = {t in
                 let envelope: CGFloat = exp(-beta * t)
                 return -x0 + envelope * (x0 + (beta * x0 + v0) * t)
-            };
+            }
         } else {
             // Overdamped
             oscillation = {t in
@@ -120,7 +120,7 @@ class RBBSpringAnimation: CAKeyframeAnimation {
                 let part2: CGFloat = x0 * cosh(omega2 * t)
                 let part3: CGFloat = ((beta * x0 + v0) / omega2) * sinh(omega2 * t)
                 return -x0 + envelope * (part2 + part3);
-            };
+            }
         }
 
         let lerp = RBBInterpolator.interpolate(self.from!, to: self.to!)
@@ -132,7 +132,9 @@ class RBBSpringAnimation: CAKeyframeAnimation {
 
 
     override func copy(with zone: NSZone?) -> Any {
-        let anim = super.copy(with: zone) as! RBBSpringAnimation
+        guard let anim = super.copy(with: zone) as? RBBSpringAnimation else {
+            fatalError()
+        }
 
         anim.damping = self.damping
         anim.velocity = self.velocity
@@ -148,4 +150,5 @@ class RBBSpringAnimation: CAKeyframeAnimation {
         
         return anim
     }
+    
 }
