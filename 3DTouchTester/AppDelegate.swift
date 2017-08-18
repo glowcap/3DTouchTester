@@ -25,14 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         let mainVC = self.window!.rootViewController as! ViewController
-        if mainVC.timerIsRunning { mainVC.timer.invalidate()}
+        if mainVC.timerIsRunning {
+            mainVC.timer.invalidate()
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        let mainVC = self.window!.rootViewController as! ViewController
+        guard let mainVC = self.window!.rootViewController as? ViewController else { return }
         if userDefaults.bool(forKey: "springSet") {
             mainVC.animateSpring(0.1, delay: 0.0)
         }
@@ -42,6 +44,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         userDefaults.set(false, forKey: "springSet")
     }
 
-
 }
-

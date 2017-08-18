@@ -12,7 +12,7 @@
 
 import UIKit
 
-//These functions are in place until PaintCode is updated
+// These functions are in place until PaintCode is updated
 func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
     return CGRect(x: x, y: y, width: width, height: height)
 }
@@ -24,11 +24,11 @@ func CGSizeMake(_ width: CGFloat, _ height: CGFloat) -> CGSize {
 func CGPointMake(_ x: CGFloat, _ y: CGFloat) -> CGPoint {
     return  CGPoint(x: x, y: y)
 }
-//End of hack files
+// End of hack files
 
 open class PressureStyleKit : NSObject {
 
-    //// Cache
+    // Cache
 
     fileprivate struct Cache {
         static var imageOfParts: UIImage?
@@ -67,12 +67,12 @@ open class PressureStyleKit : NSObject {
         static var closeAdsBtnTargets: [AnyObject]?
     }
 
-    //// Drawing Methods
+    // Drawing Methods
 
     open class func drawMain() {
 
-        //// Group 2
-        //// Bezier Drawing
+        // Group 2
+        // Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPointMake(125.5, 101.5))
         bezierPath.addLine(to: CGPointMake(181.5, 101.5))
@@ -81,7 +81,7 @@ open class PressureStyleKit : NSObject {
         bezierPath.stroke()
 
 
-        //// Bezier 3 Drawing
+        // Bezier 3 Drawing
         let bezier3Path = UIBezierPath()
         bezier3Path.move(to: CGPointMake(181.5, 101.5))
         bezier3Path.addLine(to: CGPointMake(181.5, 149.5))
@@ -90,7 +90,7 @@ open class PressureStyleKit : NSObject {
         bezier3Path.stroke()
 
 
-        //// Oval Drawing
+        // Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRectMake(174.5, 93.5, 15, 15))
         UIColor.white.setFill()
         ovalPath.fill()
@@ -99,15 +99,15 @@ open class PressureStyleKit : NSObject {
         ovalPath.stroke()
 
 
-        //// Group
-        //// Rectangle 2 Drawing
+        // Group
+        // Rectangle 2 Drawing
         let rectangle2Path = UIBezierPath(roundedRect: CGRectMake(228.5, 149.5, 132, 108), cornerRadius: 20)
         UIColor.gray.setStroke()
         rectangle2Path.lineWidth = 3
         rectangle2Path.stroke()
 
 
-        //// Rectangle Drawing
+        // Rectangle Drawing
         let rectanglePath = UIBezierPath(roundedRect: CGRectMake(239, 161, 112.5, 69.5), cornerRadius: 20)
         UIColor.gray.setStroke()
         rectanglePath.lineWidth = 3
@@ -116,7 +116,7 @@ open class PressureStyleKit : NSObject {
 
 
 
-        //// Rectangle 3 Drawing
+        // Rectangle 3 Drawing
         let rectangle3Path = UIBezierPath()
         rectangle3Path.move(to: CGPointMake(315, 252.5))
         rectangle3Path.addLine(to: CGPointMake(315, 252.5))
@@ -147,7 +147,7 @@ open class PressureStyleKit : NSObject {
         rectangle3Path.stroke()
 
 
-        //// Oval 2 Drawing
+        // Oval 2 Drawing
         let oval2Path = UIBezierPath()
         oval2Path.move(to: CGPointMake(302.5, 263.5))
         oval2Path.addCurve(to: CGPointMake(296.5, 269.5), controlPoint1: CGPointMake(302.5, 266.81), controlPoint2: CGPointMake(299.81, 269.5))
@@ -157,7 +157,7 @@ open class PressureStyleKit : NSObject {
         oval2Path.stroke()
 
 
-        //// Bezier 4 Drawing
+        // Bezier 4 Drawing
         let bezier4Path = UIBezierPath()
         bezier4Path.move(to: CGPointMake(296.5, 269.5))
         bezier4Path.addLine(to: CGPointMake(296.5, 310.5))
@@ -166,7 +166,7 @@ open class PressureStyleKit : NSObject {
         bezier4Path.stroke()
 
 
-        //// Oval 4 Drawing
+        // Oval 4 Drawing
         let oval4Path = UIBezierPath(ovalIn: CGRectMake(289.5, 310.5, 15, 15))
         UIColor.white.setFill()
         oval4Path.fill()
@@ -175,7 +175,7 @@ open class PressureStyleKit : NSObject {
         oval4Path.stroke()
 
 
-        //// Bezier 7 Drawing
+        // Bezier 7 Drawing
         let bezier7Path = UIBezierPath()
         bezier7Path.move(to: CGPointMake(182, 149.5))
         bezier7Path.addLine(to: CGPointMake(182, 149.5))
@@ -209,14 +209,14 @@ open class PressureStyleKit : NSObject {
         bezier7Path.stroke()
 
 
-        //// Rectangle 4 Drawing
+        // Rectangle 4 Drawing
         let rectangle4Path = UIBezierPath(roundedRect: CGRectMake(216.5, 310.5, 52, 15), cornerRadius: 7.5)
         UIColor.gray.setStroke()
         rectangle4Path.lineWidth = 3
         rectangle4Path.stroke()
 
 
-        //// Bezier 6 Drawing
+        // Bezier 6 Drawing
         let bezier6Path = UIBezierPath()
         bezier6Path.move(to: CGPointMake(228.5, 309.5))
         bezier6Path.addLine(to: CGPointMake(228.5, 325.5))
@@ -225,7 +225,7 @@ open class PressureStyleKit : NSObject {
         bezier6Path.stroke()
 
 
-        //// Bezier 8 Drawing
+        // Bezier 8 Drawing
         let bezier8Path = UIBezierPath()
         bezier8Path.move(to: CGPointMake(257.5, 309.5))
         bezier8Path.addLine(to: CGPointMake(257.5, 325.5))
@@ -234,7 +234,7 @@ open class PressureStyleKit : NSObject {
         bezier8Path.stroke()
 
 
-        //// Bezier 5 Drawing
+        // Bezier 5 Drawing
         let bezier5Path = UIBezierPath()
         bezier5Path.move(to: CGPointMake(289.5, 317.5))
         bezier5Path.addLine(to: CGPointMake(268.5, 317.5))
@@ -243,7 +243,7 @@ open class PressureStyleKit : NSObject {
         bezier5Path.stroke()
 
 
-        //// Bezier 9 Drawing
+        // Bezier 9 Drawing
         let bezier9Path = UIBezierPath()
         bezier9Path.move(to: CGPointMake(181.5, 265.5))
         bezier9Path.addLine(to: CGPointMake(181.5, 313.5))
@@ -252,7 +252,7 @@ open class PressureStyleKit : NSObject {
         bezier9Path.stroke()
 
 
-        //// Oval 5 Drawing
+        // Oval 5 Drawing
         let oval5Path = UIBezierPath(ovalIn: CGRectMake(173.5, 309.5, 15, 15))
         UIColor.white.setFill()
         oval5Path.fill()
@@ -261,7 +261,7 @@ open class PressureStyleKit : NSObject {
         oval5Path.stroke()
 
 
-        //// Bezier 10 Drawing
+        // Bezier 10 Drawing
         let bezier10Path = UIBezierPath()
         bezier10Path.move(to: CGPointMake(215.5, 317.5))
         bezier10Path.addLine(to: CGPointMake(189.5, 317.5))
@@ -270,7 +270,7 @@ open class PressureStyleKit : NSObject {
         bezier10Path.stroke()
 
 
-        //// Bezier 13 Drawing
+        // Bezier 13 Drawing
         let bezier13Path = UIBezierPath()
         bezier13Path.move(to: CGPointMake(181.5, 324.5))
         bezier13Path.addLine(to: CGPointMake(181.5, 348.5))
@@ -280,14 +280,14 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawParts() {
-        //// General Declarations
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
 
-        //// Color Declarations
+        // Color Declarations
         let red = UIColor(red: 0.859, green: 0.227, blue: 0.196, alpha: 1.000)
         let green = UIColor(red: 0.824, green: 0.910, blue: 0.545, alpha: 1.000)
 
-        //// Oval 3 Drawing
+        // Oval 3 Drawing
         context?.saveGState()
         context?.translateBy(x: 115.5, y: 116.5)
 
@@ -301,7 +301,7 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Bezier 2 Drawing
+        // Bezier 2 Drawing
         let bezier2Path = UIBezierPath()
         bezier2Path.move(to: CGPointMake(43.5, 116.5))
         bezier2Path.addLine(to: CGPointMake(90.5, 116.5))
@@ -313,7 +313,7 @@ open class PressureStyleKit : NSObject {
         bezier2Path.stroke()
 
 
-        //// SixSBtn Drawing
+        // SixSBtn Drawing
         let sixSBtnPath = UIBezierPath(ovalIn: CGRectMake(12.5, 80.5, 72, 72))
         red.setFill()
         sixSBtnPath.fill()
@@ -322,7 +322,7 @@ open class PressureStyleKit : NSObject {
         sixSBtnPath.stroke()
 
 
-        //// Bezier Drawing
+        // Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPointMake(125.5, 116.5))
         bezierPath.addLine(to: CGPointMake(181.5, 116.5))
@@ -331,7 +331,7 @@ open class PressureStyleKit : NSObject {
         bezierPath.stroke()
 
 
-        //// Bezier 3 Drawing
+        // Bezier 3 Drawing
         let bezier3Path = UIBezierPath()
         bezier3Path.move(to: CGPointMake(181.5, 116.5))
         bezier3Path.addLine(to: CGPointMake(181.5, 164.5))
@@ -340,7 +340,7 @@ open class PressureStyleKit : NSObject {
         bezier3Path.stroke()
 
 
-        //// Oval Drawing
+        // Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRectMake(174.5, 108.5, 15, 15))
         UIColor.white.setFill()
         ovalPath.fill()
@@ -349,22 +349,22 @@ open class PressureStyleKit : NSObject {
         ovalPath.stroke()
 
 
-        //// Group
-        //// Rectangle 2 Drawing
+        // Group
+        // Rectangle 2 Drawing
         let rectangle2Path = UIBezierPath(roundedRect: CGRectMake(228.5, 164.5, 132, 108), cornerRadius: 20)
         UIColor.gray.setStroke()
         rectangle2Path.lineWidth = 3
         rectangle2Path.stroke()
 
 
-        //// Rectangle Drawing
+        // Rectangle Drawing
         let rectanglePath = UIBezierPath(roundedRect: CGRectMake(239, 176, 112.5, 69.5), cornerRadius: 20)
         UIColor.gray.setStroke()
         rectanglePath.lineWidth = 3
         rectanglePath.stroke()
 
 
-        //// Text Drawing
+        // Text Drawing
         let textRect = CGRectMake(258, 247, 74, 21)
         let textTextContent = NSString(string: "FORCE")
         let textStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
@@ -379,7 +379,7 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Text 2 Drawing
+        // Text 2 Drawing
         let text2Rect = CGRectMake(248, 169, 95, 101)
         let text2TextContent = NSString(string: "100%")
         let text2Style = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
@@ -396,7 +396,7 @@ open class PressureStyleKit : NSObject {
 
 
 
-        //// Rectangle 3 Drawing
+        // Rectangle 3 Drawing
         let rectangle3Path = UIBezierPath()
         rectangle3Path.move(to: CGPointMake(315, 267.5))
         rectangle3Path.addLine(to: CGPointMake(315, 267.5))
@@ -427,7 +427,7 @@ open class PressureStyleKit : NSObject {
         rectangle3Path.stroke()
 
 
-        //// Oval 2 Drawing
+        // Oval 2 Drawing
         let oval2Path = UIBezierPath()
         oval2Path.move(to: CGPointMake(302.5, 278.5))
         oval2Path.addCurve(to: CGPointMake(296.5, 284.5), controlPoint1: CGPointMake(302.5, 281.81), controlPoint2: CGPointMake(299.81, 284.5))
@@ -437,7 +437,7 @@ open class PressureStyleKit : NSObject {
         oval2Path.stroke()
 
 
-        //// Bezier 4 Drawing
+        // Bezier 4 Drawing
         let bezier4Path = UIBezierPath()
         bezier4Path.move(to: CGPointMake(296.5, 284.5))
         bezier4Path.addLine(to: CGPointMake(296.5, 325.5))
@@ -446,7 +446,7 @@ open class PressureStyleKit : NSObject {
         bezier4Path.stroke()
 
 
-        //// Oval 4 Drawing
+        // Oval 4 Drawing
         let oval4Path = UIBezierPath(ovalIn: CGRectMake(289.5, 325.5, 15, 15))
         UIColor.white.setFill()
         oval4Path.fill()
@@ -455,13 +455,13 @@ open class PressureStyleKit : NSObject {
         oval4Path.stroke()
 
 
-        //// forceFuse Drawing
+        // forceFuse Drawing
         let forceFusePath = UIBezierPath(rect: CGRectMake(176, 176, 12, 91))
         red.setFill()
         forceFusePath.fill()
 
 
-        //// Bezier 7 Drawing
+        // Bezier 7 Drawing
         let bezier7Path = UIBezierPath()
         bezier7Path.move(to: CGPointMake(182, 164.5))
         bezier7Path.addLine(to: CGPointMake(182, 164.5))
@@ -495,7 +495,7 @@ open class PressureStyleKit : NSObject {
         bezier7Path.stroke()
 
 
-        //// forceFuse 2 Drawing
+        // forceFuse 2 Drawing
         context?.saveGState()
         context?.translateBy(x: 229, y: 339)
         context?.rotate(by: -90 * CGFloat(M_PI) / 180)
@@ -507,14 +507,14 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Rectangle 4 Drawing
+        // Rectangle 4 Drawing
         let rectangle4Path = UIBezierPath(roundedRect: CGRectMake(216.5, 325.5, 52, 15), cornerRadius: 7.5)
         UIColor.gray.setStroke()
         rectangle4Path.lineWidth = 3
         rectangle4Path.stroke()
 
 
-        //// Bezier 6 Drawing
+        // Bezier 6 Drawing
         let bezier6Path = UIBezierPath()
         bezier6Path.move(to: CGPointMake(228.5, 324.5))
         bezier6Path.addLine(to: CGPointMake(228.5, 340.5))
@@ -523,7 +523,7 @@ open class PressureStyleKit : NSObject {
         bezier6Path.stroke()
 
 
-        //// Bezier 8 Drawing
+        // Bezier 8 Drawing
         let bezier8Path = UIBezierPath()
         bezier8Path.move(to: CGPointMake(257.5, 324.5))
         bezier8Path.addLine(to: CGPointMake(257.5, 340.5))
@@ -532,7 +532,7 @@ open class PressureStyleKit : NSObject {
         bezier8Path.stroke()
 
 
-        //// Bezier 5 Drawing
+        // Bezier 5 Drawing
         let bezier5Path = UIBezierPath()
         bezier5Path.move(to: CGPointMake(289.5, 332.5))
         bezier5Path.addLine(to: CGPointMake(268.5, 332.5))
@@ -541,7 +541,7 @@ open class PressureStyleKit : NSObject {
         bezier5Path.stroke()
 
 
-        //// Bezier 9 Drawing
+        // Bezier 9 Drawing
         let bezier9Path = UIBezierPath()
         bezier9Path.move(to: CGPointMake(181.5, 280.5))
         bezier9Path.addLine(to: CGPointMake(181.5, 328.5))
@@ -550,7 +550,7 @@ open class PressureStyleKit : NSObject {
         bezier9Path.stroke()
 
 
-        //// Oval 5 Drawing
+        // Oval 5 Drawing
         let oval5Path = UIBezierPath(ovalIn: CGRectMake(173.5, 324.5, 15, 15))
         UIColor.white.setFill()
         oval5Path.fill()
@@ -559,7 +559,7 @@ open class PressureStyleKit : NSObject {
         oval5Path.stroke()
 
 
-        //// Bezier 10 Drawing
+        // Bezier 10 Drawing
         let bezier10Path = UIBezierPath()
         bezier10Path.move(to: CGPointMake(215.5, 332.5))
         bezier10Path.addLine(to: CGPointMake(189.5, 332.5))
@@ -568,7 +568,7 @@ open class PressureStyleKit : NSObject {
         bezier10Path.stroke()
 
 
-        //// Text 3 Drawing
+        // Text 3 Drawing
         let text3Path = UIBezierPath()
         text3Path.move(to: CGPointMake(37.88, 103.22))
         text3Path.addLine(to: CGPointMake(38, 103.34))
@@ -654,7 +654,7 @@ open class PressureStyleKit : NSObject {
         text3Path.fill()
 
 
-        //// Text 4 Drawing
+        // Text 4 Drawing
         let text4Rect = CGRectMake(13, 154, 72, 21)
         let text4TextContent = NSString(string: "Testing…")
         let text4Style = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
@@ -669,7 +669,7 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Bezier 11 Drawing
+        // Bezier 11 Drawing
         context?.saveGState()
         context?.translateBy(x: 169.5, y: 513.5)
         context?.rotate(by: -90 * CGFloat(M_PI) / 180)
@@ -687,7 +687,7 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Oval 6 Drawing
+        // Oval 6 Drawing
         let oval6Path = UIBezierPath(ovalIn: CGRectMake(131.5, 488.5, 100, 100))
         UIColor.white.setFill()
         oval6Path.fill()
@@ -696,14 +696,14 @@ open class PressureStyleKit : NSObject {
         oval6Path.stroke()
 
 
-        //// Oval 7 Drawing
+        // Oval 7 Drawing
         let oval7Path = UIBezierPath(ovalIn: CGRectMake(141.5, 498.5, 80, 80))
         UIColor.gray.setStroke()
         oval7Path.lineWidth = 3
         oval7Path.stroke()
 
 
-        //// Oval 8 Drawing
+        // Oval 8 Drawing
         context?.saveGState()
         context?.translateBy(x: 181.5, y: 450.5)
 
@@ -717,7 +717,7 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Bezier 12 Drawing
+        // Bezier 12 Drawing
         let bezier12Path = UIBezierPath()
         bezier12Path.move(to: CGPointMake(182.5, 364))
         bezier12Path.addLine(to: CGPointMake(163.5, 381))
@@ -731,7 +731,7 @@ open class PressureStyleKit : NSObject {
         bezier12Path.stroke()
 
 
-        //// Bezier 13 Drawing
+        // Bezier 13 Drawing
         let bezier13Path = UIBezierPath()
         bezier13Path.move(to: CGPointMake(181.5, 339.5))
         bezier13Path.addLine(to: CGPointMake(181.5, 363.5))
@@ -740,7 +740,7 @@ open class PressureStyleKit : NSObject {
         bezier13Path.stroke()
 
 
-        //// Bezier 15 Drawing
+        // Bezier 15 Drawing
         let bezier15Path = UIBezierPath()
         bezier15Path.move(to: CGPointMake(181.5, 406.5))
         bezier15Path.addLine(to: CGPointMake(181.5, 440.5))
@@ -750,11 +750,11 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawYes6s() {
-        //// Color Declarations
+        // Color Declarations
         let green = UIColor(red: 0.824, green: 0.910, blue: 0.545, alpha: 1.000)
 
-        //// Group
-        //// SixSBtn Drawing
+        // Group
+        // SixSBtn Drawing
         let sixSBtnPath = UIBezierPath(ovalIn: CGRectMake(3, 2.5, 72, 72))
         green.setFill()
         sixSBtnPath.fill()
@@ -763,7 +763,7 @@ open class PressureStyleKit : NSObject {
         sixSBtnPath.stroke()
 
 
-        //// Text 3 Drawing
+        // Text 3 Drawing
         let text3Path = UIBezierPath()
         text3Path.move(to: CGPointMake(28.38, 33.22))
         text3Path.addLine(to: CGPointMake(28.5, 33.34))
@@ -850,11 +850,11 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawTesting6s() {
-        //// Color Declarations
+        // Color Declarations
         let yellow = UIColor(red: 0.945, green: 0.775, blue: 0.061, alpha: 1.000)
 
-        //// Group
-        //// SixSBtn Drawing
+        // Group
+        // SixSBtn Drawing
         let sixSBtnPath = UIBezierPath(ovalIn: CGRectMake(3, 2.5, 72, 72))
         yellow.setFill()
         sixSBtnPath.fill()
@@ -863,7 +863,7 @@ open class PressureStyleKit : NSObject {
         sixSBtnPath.stroke()
 
 
-        //// Text 3 Drawing
+        // Text 3 Drawing
         let text3Path = UIBezierPath()
         text3Path.move(to: CGPointMake(28.38, 33.22))
         text3Path.addLine(to: CGPointMake(28.5, 33.34))
@@ -950,11 +950,11 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawNo6s() {
-        //// Color Declarations
+        // Color Declarations
         let red = UIColor(red: 0.859, green: 0.227, blue: 0.196, alpha: 1.000)
 
-        //// Group
-        //// SixSBtn Drawing
+        // Group
+        // SixSBtn Drawing
         let sixSBtnPath = UIBezierPath(ovalIn: CGRectMake(3, 2.5, 72, 72))
         red.setFill()
         sixSBtnPath.fill()
@@ -963,7 +963,7 @@ open class PressureStyleKit : NSObject {
         sixSBtnPath.stroke()
 
 
-        //// Text 3 Drawing
+        // Text 3 Drawing
         let text3Path = UIBezierPath()
         text3Path.move(to: CGPointMake(28.38, 33.22))
         text3Path.addLine(to: CGPointMake(28.5, 33.34))
@@ -1051,7 +1051,7 @@ open class PressureStyleKit : NSObject {
 
     open class func drawSignalConnector() {
 
-        //// Bezier 2 Drawing
+        // Bezier 2 Drawing
         let bezier2Path = UIBezierPath()
         bezier2Path.move(to: CGPointMake(1, 15))
         bezier2Path.addLine(to: CGPointMake(48, 15))
@@ -1064,13 +1064,13 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawLightUpCircleOn() {
-        //// General Declarations
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
 
-        //// Color Declarations
+        // Color Declarations
         let green = UIColor(red: 0.824, green: 0.910, blue: 0.545, alpha: 1.000)
 
-        //// Oval 3 Drawing
+        // Oval 3 Drawing
         context?.saveGState()
         context?.translateBy(x: 12.5, y: 12.5)
 
@@ -1085,10 +1085,10 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawLightUpCircleOff() {
-        //// General Declarations
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
 
-        //// Oval 3 Drawing
+        // Oval 3 Drawing
         context?.saveGState()
         context?.translateBy(x: 12.5, y: 12.5)
 
@@ -1104,7 +1104,7 @@ open class PressureStyleKit : NSObject {
 
     open class func drawButtonBase() {
 
-        //// Bezier Drawing
+        // Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPointMake(53, 1.5))
         bezierPath.addCurve(to: CGPointMake(23.34, 11.24), controlPoint1: CGPointMake(41.9, 1.5), controlPoint2: CGPointMake(31.64, 5.12))
@@ -1129,7 +1129,7 @@ open class PressureStyleKit : NSObject {
 
     open class func drawButtonCenter() {
 
-        //// Oval 7 Drawing
+        // Oval 7 Drawing
         let oval7Path = UIBezierPath()
         oval7Path.move(to: CGPointMake(3.63, 35.86))
         oval7Path.addCurve(to: CGPointMake(43, 3), controlPoint1: CGPointMake(7, 17.18), controlPoint2: CGPointMake(23.34, 3))
@@ -1143,10 +1143,10 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawButtonBaseOn() {
-        //// Color Declarations
+        // Color Declarations
         let green = UIColor(red: 0.824, green: 0.910, blue: 0.545, alpha: 1.000)
 
-        //// Oval 6 Drawing
+        // Oval 6 Drawing
         let oval6Path = UIBezierPath(ovalIn: CGRectMake(2.5, 2.5, 100, 100))
         green.setFill()
         oval6Path.fill()
@@ -1156,10 +1156,10 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawButtonBaseRed() {
-        //// Color Declarations
+        // Color Declarations
         let red = UIColor(red: 0.859, green: 0.227, blue: 0.196, alpha: 1.000)
 
-        //// Oval 6 Drawing
+        // Oval 6 Drawing
         let oval6Path = UIBezierPath(ovalIn: CGRectMake(2.5, 2.5, 100, 100))
         red.setFill()
         oval6Path.fill()
@@ -1169,11 +1169,11 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawBtnSignalTest() {
-        //// General Declarations
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
 
-        //// Group
-        //// Oval 8 Drawing
+        // Group
+        // Oval 8 Drawing
         context?.saveGState()
         context?.translateBy(x: 12.5, y: 43.5)
 
@@ -1187,7 +1187,7 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Bezier 15 Drawing
+        // Bezier 15 Drawing
         let bezier15Path = UIBezierPath()
         bezier15Path.move(to: CGPointMake(12.5, -0.5))
         bezier15Path.addLine(to: CGPointMake(12.5, 33.5))
@@ -1197,14 +1197,14 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawBtnSignalGreen() {
-        //// General Declarations
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
 
-        //// Color Declarations
+        // Color Declarations
         let green = UIColor(red: 0.824, green: 0.910, blue: 0.545, alpha: 1.000)
 
-        //// Group
-        //// Oval 8 Drawing
+        // Group
+        // Oval 8 Drawing
         context?.saveGState()
         context?.translateBy(x: 12.5, y: 43.5)
 
@@ -1218,7 +1218,7 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Bezier 15 Drawing
+        // Bezier 15 Drawing
         let bezier15Path = UIBezierPath()
         bezier15Path.move(to: CGPointMake(12.5, -0.5))
         bezier15Path.addLine(to: CGPointMake(12.5, 33.5))
@@ -1228,14 +1228,14 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawBtnSignalRed() {
-        //// General Declarations
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
 
-        //// Color Declarations
+        // Color Declarations
         let red = UIColor(red: 0.859, green: 0.227, blue: 0.196, alpha: 1.000)
 
-        //// Group
-        //// Oval 8 Drawing
+        // Group
+        // Oval 8 Drawing
         context?.saveGState()
         context?.translateBy(x: 12.5, y: 43.5)
 
@@ -1249,7 +1249,7 @@ open class PressureStyleKit : NSObject {
         context?.restoreGState()
 
 
-        //// Bezier 15 Drawing
+        // Bezier 15 Drawing
         let bezier15Path = UIBezierPath()
         bezier15Path.move(to: CGPointMake(12.5, -0.5))
         bezier15Path.addLine(to: CGPointMake(12.5, 33.5))
@@ -1260,8 +1260,8 @@ open class PressureStyleKit : NSObject {
 
     open class func drawButtonConnector() {
 
-        //// Group
-        //// Oval Drawing
+        // Group
+        // Oval Drawing
         let ovalPath = UIBezierPath()
         ovalPath.move(to: CGPointMake(32.5, 1.5))
         ovalPath.addCurve(to: CGPointMake(17.5, 16.5), controlPoint1: CGPointMake(32.5, 9.78), controlPoint2: CGPointMake(25.78, 16.5))
@@ -1271,7 +1271,7 @@ open class PressureStyleKit : NSObject {
         ovalPath.stroke()
 
 
-        //// Bezier 15 Drawing
+        // Bezier 15 Drawing
         let bezier15Path = UIBezierPath()
         bezier15Path.move(to: CGPointMake(17.5, 16.5))
         bezier15Path.addLine(to: CGPointMake(17.5, 67.5))
@@ -1282,7 +1282,7 @@ open class PressureStyleKit : NSObject {
 
     open class func drawSpring() {
 
-        //// Bezier 12 Drawing
+        // Bezier 12 Drawing
         let bezier12Path = UIBezierPath()
         bezier12Path.move(to: CGPointMake(14.5, 2.5))
         bezier12Path.addLine(to: CGPointMake(1.5, 17.75))
@@ -1296,7 +1296,7 @@ open class PressureStyleKit : NSObject {
         bezier12Path.stroke()
 
 
-        //// Bezier Drawing
+        // Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPointMake(14.5, 64.5))
         bezierPath.addLine(to: CGPointMake(14.5, 72.5))
@@ -1305,7 +1305,7 @@ open class PressureStyleKit : NSObject {
         bezierPath.stroke()
 
 
-        //// Bezier 2 Drawing
+        // Bezier 2 Drawing
         let bezier2Path = UIBezierPath()
         bezier2Path.move(to: CGPointMake(14.5, -4.5))
         bezier2Path.addLine(to: CGPointMake(14.5, 3.5))
@@ -1315,13 +1315,13 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawLightUpCircleFail() {
-        //// General Declarations
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
 
-        //// Color Declarations
+        // Color Declarations
         let red = UIColor(red: 0.859, green: 0.227, blue: 0.196, alpha: 1.000)
 
-        //// Oval 3 Drawing
+        // Oval 3 Drawing
         context?.saveGState()
         context?.translateBy(x: 12.5, y: 12.5)
 
@@ -1337,33 +1337,33 @@ open class PressureStyleKit : NSObject {
 
     open class func drawInformationSign() {
 
-        //// Group 2
-        //// Rectangle 5 Drawing
+        // Group 2
+        // Rectangle 5 Drawing
         let rectangle5Path = UIBezierPath(roundedRect: CGRectMake(2.5, 2.5, 114, 70), cornerRadius: 10)
         UIColor.gray.setStroke()
         rectangle5Path.lineWidth = 3
         rectangle5Path.stroke()
 
 
-        //// Oval 3 Drawing
+        // Oval 3 Drawing
         let oval3Path = UIBezierPath(ovalIn: CGRectMake(7, 8, 5, 5))
         UIColor.gray.setFill()
         oval3Path.fill()
 
 
-        //// Oval 6 Drawing
+        // Oval 6 Drawing
         let oval6Path = UIBezierPath(ovalIn: CGRectMake(107, 8, 5, 5))
         UIColor.gray.setFill()
         oval6Path.fill()
 
 
-        //// Oval 7 Drawing
+        // Oval 7 Drawing
         let oval7Path = UIBezierPath(ovalIn: CGRectMake(107, 62, 5, 5))
         UIColor.gray.setFill()
         oval7Path.fill()
 
 
-        //// Oval 8 Drawing
+        // Oval 8 Drawing
         let oval8Path = UIBezierPath(ovalIn: CGRectMake(7, 62, 5, 5))
         UIColor.gray.setFill()
         oval8Path.fill()
@@ -1371,8 +1371,8 @@ open class PressureStyleKit : NSObject {
 
     open class func drawTesting6sWhite() {
 
-        //// Group
-        //// SixSBtn Drawing
+        // Group
+        // SixSBtn Drawing
         let sixSBtnPath = UIBezierPath(ovalIn: CGRectMake(3, 2.5, 72, 72))
         UIColor.white.setFill()
         sixSBtnPath.fill()
@@ -1381,7 +1381,7 @@ open class PressureStyleKit : NSObject {
         sixSBtnPath.stroke()
 
 
-        //// Text 3 Drawing
+        // Text 3 Drawing
         let text3Path = UIBezierPath()
         text3Path.move(to: CGPointMake(28.38, 33.22))
         text3Path.addLine(to: CGPointMake(28.5, 33.34))
@@ -1469,8 +1469,8 @@ open class PressureStyleKit : NSObject {
 
     open class func drawSixSignalRing() {
 
-        //// Group
-        //// Text 3 Drawing
+        // Group
+        // Text 3 Drawing
         let text3Path = UIBezierPath()
         text3Path.move(to: CGPointMake(28.38, 33.22))
         text3Path.addLine(to: CGPointMake(28.5, 33.34))
@@ -1556,7 +1556,7 @@ open class PressureStyleKit : NSObject {
         text3Path.fill()
 
 
-        //// Bezier Drawing
+        // Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPointMake(38, 2.5))
         bezierPath.addCurve(to: CGPointMake(16.83, 9.38), controlPoint1: CGPointMake(30.09, 2.5), controlPoint2: CGPointMake(22.77, 5.05))
@@ -1580,11 +1580,11 @@ open class PressureStyleKit : NSObject {
     }
 
     open class func drawTesting6s2() {
-        //// Color Declarations
+        // Color Declarations
         let yellow = UIColor(red: 0.945, green: 0.775, blue: 0.061, alpha: 1.000)
 
-        //// Group
-        //// SixSBtn Drawing
+        // Group
+        // SixSBtn Drawing
         let sixSBtnPath = UIBezierPath(ovalIn: CGRectMake(3, 2.5, 72, 72))
         yellow.setFill()
         sixSBtnPath.fill()
@@ -1593,7 +1593,7 @@ open class PressureStyleKit : NSObject {
         sixSBtnPath.stroke()
 
 
-        //// Text 3 Drawing
+        // Text 3 Drawing
         let text3Path = UIBezierPath()
         text3Path.move(to: CGPointMake(28.38, 33.22))
         text3Path.addLine(to: CGPointMake(28.5, 33.34))
@@ -1681,7 +1681,7 @@ open class PressureStyleKit : NSObject {
 
     open class func drawNon6StartView() {
 
-        //// Bezier Drawing
+        // Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPointMake(25, -2))
         bezierPath.addLine(to: CGPointMake(25.5, 76.5))
@@ -1694,7 +1694,7 @@ open class PressureStyleKit : NSObject {
 
     open class func drawNon6StartBtn() {
 
-        //// Bezier Drawing
+        // Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPointMake(25.03, 1.79))
         bezierPath.addCurve(to: CGPointMake(12.08, 6.11), controlPoint1: CGPointMake(20.17, 1.79), controlPoint2: CGPointMake(15.69, 3.39))
@@ -1719,8 +1719,8 @@ open class PressureStyleKit : NSObject {
 
     open class func drawCloseAdsBtn() {
 
-        //// Group
-        //// Text Drawing
+        // Group
+        // Text Drawing
         let textPath = UIBezierPath()
         textPath.move(to: CGPointMake(4.38, 13.88))
         textPath.addLine(to: CGPointMake(8.07, 8.94))
@@ -1744,14 +1744,14 @@ open class PressureStyleKit : NSObject {
         textPath.fill()
 
 
-        //// Oval Drawing
+        // Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRectMake(1.5, 1.5, 15, 15))
         UIColor.gray.setStroke()
         ovalPath.lineWidth = 1
         ovalPath.stroke()
     }
 
-    //// Generated Images
+    // Generated Images
 
     open class var imageOfParts: UIImage {
         if Cache.imageOfParts != nil {
@@ -1991,7 +1991,7 @@ open class PressureStyleKit : NSObject {
         return Cache.imageOfCloseAdsBtn!
     }
 
-    //// Customization Infrastructure
+    // Customization Infrastructure
 /*
     @IBOutlet var partsTargets: [AnyObject]! {
         get { return Cache.partsTargets }

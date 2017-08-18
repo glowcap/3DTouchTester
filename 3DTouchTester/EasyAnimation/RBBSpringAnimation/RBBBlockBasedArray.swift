@@ -26,7 +26,7 @@ class RBBBlockBasedArray: NSArray {
     //and can't override it from here in Swift 1.2; need to do initialization from an ordinary method
     
     func setCount(_ count: Int, block: @escaping RBBBlockBasedArrayBlock) {
-        self.countBlockBased = count;
+        self.countBlockBased = count
         self.block = block
     }
     
@@ -34,7 +34,7 @@ class RBBBlockBasedArray: NSArray {
         return countBlockBased
     }
     
-    //will crash if block is not set
+    // will crash if block is not set
 
     override func object(at index: Int) -> Any {
         return block!(index)
@@ -43,4 +43,5 @@ class RBBBlockBasedArray: NSArray {
     func asAnys() -> [Any] {
         return map {$0 as Any}
     }
+
 }

@@ -34,7 +34,7 @@ class RBBSpringAnimation: CAKeyframeAnimation {
         let beta = damping / (2 * mass)
         var duration: CFTimeInterval = 0
     
-        while (exp(-beta * duration) >= epsilon) {
+        while exp(-beta * duration) >= epsilon {
             duration += 0.1
         }
         
